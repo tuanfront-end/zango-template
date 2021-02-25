@@ -1,4 +1,3 @@
-import Modal from "components/Modal/Modal";
 import { QuickViewProductModalId } from "components/QuickViewProduct/QuickViewProduct";
 import ToolTip2 from "components/ToolTip2/ToolTip2";
 import ToolTip2Panel from "components/ToolTip2/ToolTip2Panel";

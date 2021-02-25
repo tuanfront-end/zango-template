@@ -22,7 +22,9 @@ const Card1: React.FC<Card1Props> = ({ img, name }) => {
           Shop now
         </MyLink>
       </div>
-      <a className="absolute inset-0" href="#root"></a>
+      <a className="absolute inset-0 sr-only" href="#root">
+        Product some
+      </a>
     </div>
   );
 };

@@ -55,7 +55,7 @@ const SectionHero1 = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative pb-8 md:pb-14">
       <div className="glide-fade relative">
         <div className="glide__track" data-glide-el="track">
           <ul className="glide__slides">
