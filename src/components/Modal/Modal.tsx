@@ -65,7 +65,7 @@ const Modal: React.FC<ModalProps> = ({
     }
     return (
       <div className="flex justify-end px-6 py-4 space-x-4 border-t border-solid border-neutral-700 rounded-b">
-        <Button size="small" type="ghost" color="neutral" modalToggleId={id}>
+        <Button size="small" modalToggleId={id}>
           small button
         </Button>
         <Button size="small" modalToggleId={id}>
@@ -89,7 +89,7 @@ const Modal: React.FC<ModalProps> = ({
     <div>
       {_renderButtonOpen()}
       <div
-        className="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+        className="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-max outline-none focus:outline-none justify-center items-center"
         id={id}
       >
         <div className="relative w-auto my-6 mx-auto max-w-3xl">

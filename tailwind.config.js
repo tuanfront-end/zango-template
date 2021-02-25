@@ -29,9 +29,21 @@ module.exports = {
         "2xl": "128px",
       },
     },
+    letterSpacing: {
+      tightest: "-.075em",
+      tighter: "-.05em",
+      tight: "-.025em",
+      normal: "0",
+      wide: ".025em",
+      wider: ".05em",
+      widest: ".1em",
+      widest: ".25em",
+      //
+      "sub-title-540": "10px",
+    },
     fontFamily: {
       display: ["Jost", "system-ui", "sans-serif"],
-      LibreFranklin: ["LibreFranklin-", "system-ui", "sans-serif"],
+      LibreFranklin: ["LibreFranklin", "system-ui", "sans-serif"],
       LineAwesome: ["Line Awesome Free", "system-ui", "sans-serif"],
       Flaticon: ["Flaticon", "system-ui", "sans-serif"],
       icomoon: ["icomoon", "system-ui", "sans-serif"],
@@ -112,12 +124,8 @@ module.exports = {
         "3px": "3px",
       },
       fontSize: {
-        f1: ["55px", "101.82%"],
-        f2: ["44px", "109.09%"],
-        f3: ["35px", "114.29%"],
-        f4: ["28px", "114.29%"],
-        f5: ["22.5px", "124.44%"],
-        f6: ["18px", "155.56%"],
+        "1.5xl": "1.375rem",
+        "90px": "5.625rem",
         //
       },
     },
@@ -132,6 +140,7 @@ module.exports = {
       backgroundColor: ["checked", "disabled"],
       textColor: ["disabled"],
       borderColor: ["checked"],
+      translate: ["active", "group-hover"],
     },
   },
   plugins: [

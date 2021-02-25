@@ -1,3 +1,6 @@
+import Dropdown from "components/Dropdown/Dropdown";
+import DropdownPanel from "components/Dropdown/DropdownPanel";
+import DropdownTrigger from "components/Dropdown/DropdownTrigger";
 import MenuBar from "components/MenuBar/MenuBar";
 import Navigation from "components/Navigation/Navigation";
 import SearchInput from "components/SearchInput/SearchInput";
@@ -13,12 +16,22 @@ export default function Header() {
         </div>
         <Navigation />
         <div className="lg:w-0 lg:flex-1 flex-shrink-0 flex items-center font-light justify-end text-white xl:text-2xl text-xl">
-          <button className="mr-4 2xl:mr-5">
-            <i className="las la-user-circle"></i>
-          </button>
-          <button>
-            <i className="las la-shopping-bag"></i>
-          </button>
+          <Dropdown>
+            <DropdownTrigger containerClassName="mr-4 2xl:mr-5">
+              <i className="las la-user-circle"></i>
+            </DropdownTrigger>
+            <DropdownPanel popperPlacement="bottom-end">
+              <h1>Hello</h1>
+            </DropdownPanel>
+          </Dropdown>
+          <Dropdown>
+            <DropdownTrigger containerClassName="">
+              <i className="las la-shopping-bag"></i>
+            </DropdownTrigger>
+            <DropdownPanel popperPlacement="bottom-end">
+              <h1>Hello</h1>
+            </DropdownPanel>
+          </Dropdown>
         </div>
       </div>
     </div>

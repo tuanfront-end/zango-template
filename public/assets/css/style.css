@@ -184,3 +184,30 @@
   font-weight: 300;
 }
 /* ---------------- */
+/* ---------------- */
+@font-face {
+  font-family: LibreFranklin;
+  src: url(../fonts/Libre_Franklin/static/LibreFranklin-ExtraLight.ttf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: LibreFranklin;
+  src: url(../fonts/Libre_Franklin/static/LibreFranklin-ExtraLightItalic.ttf);
+  font-style: italic;
+  font-weight: 200;
+}
+/* ---------------- */
+@font-face {
+  font-family: LibreFranklin;
+  src: url(../fonts/Libre_Franklin/static/LibreFranklin-Thin.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: LibreFranklin;
+  src: url(../fonts/Libre_Franklin/static/LibreFranklin-ThinItalic.ttf);
+  font-style: italic;
+  font-weight: 100;
+}
+/* ---------------- */

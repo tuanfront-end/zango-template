@@ -1,6 +1,7 @@
 window.addEventListener("load", function () {
   _toogleNightMode();
   _handleToggleDropdown();
+  _handleToggletoolTip();
   _toggleModal();
   _toggleHiddenClass();
   _newGlideCarousel();
@@ -95,10 +96,14 @@ function _toggleModal() {
       event.preventDefault();
       const modalID = element.getAttribute("data-ttnc-modal-toggle");
       if (!modalID) return;
-      document.getElementById(modalID).classList.toggle("hidden");
-      document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
-      document.getElementById(modalID).classList.toggle("flex");
-      document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+      const a = document.getElementById(modalID);
+      const b = document.getElementById(modalID + "-backdrop");
+      if (!a || !b) return;
+
+      a.classList.toggle("hidden");
+      b.classList.toggle("hidden");
+      a.classList.toggle("flex");
+      b.classList.toggle("flex");
     });
   });
 }
@@ -113,8 +118,40 @@ function _handleToggleDropdown() {
     if (!panel) return;
     element.addEventListener("click", (event) => {
       event.preventDefault();
+      const placement = panel.getAttribute("data-popper-placement");
+
       var popper = new Popper(element, panel, {
-        placement: "bottom-start",
+        placement: placement || "bottom-start",
+      });
+
+      panelClass.toggle("hidden");
+      panelClass.toggle("block");
+    });
+  });
+}
+
+function _handleToggletoolTip() {
+  const btns = [...document.querySelectorAll(".ttnc-toolTip__btn")];
+  const toolTips = [...document.querySelectorAll(".ttnc-toolTip__panel")];
+  if (!btns || !btns.length) return;
+  btns.forEach((element, key, parent) => {
+    const panel = element.nextElementSibling;
+    const panelClass = panel.classList;
+    if (!panel) return;
+    element.addEventListener("mouseenter", (event) => {
+      event && event.preventDefault();
+      const placement = panel.getAttribute("data-popper-placement");
+      var popper = new Popper(element, panel, {
+        placement: placement || "bottom-start",
+      });
+      panelClass.toggle("hidden");
+      panelClass.toggle("block");
+    });
+    element.addEventListener("mouseleave", (event) => {
+      event && event.preventDefault();
+      const placement = panel.getAttribute("data-popper-placement");
+      var popper = new Popper(element, panel, {
+        placement: placement || "bottom-start",
       });
       panelClass.toggle("hidden");
       panelClass.toggle("block");
@@ -158,6 +195,7 @@ function _newGlideCarousel() {
       rewindDuration: 1,
       throttle: 1,
       rewind: true,
+      gap: 0,
     });
     glide.mount();
   };
@@ -188,5 +226,24 @@ function _setBgColorForAvatar() {
     const backgroundColor = avatarColors[backgroundIndex];
     //
     element.style.backgroundColor = backgroundColor;
+  });
+}
+
+function myToolTipPopperJs() {
+  const popcorns = [...document.querySelectorAll(".popcorn")];
+  const tooltips = [...document.querySelectorAll(".tooltip")];
+
+  popcorns.map((value) => {
+    createPopper(popcorn, tooltip, {
+      placement: "top",
+      modifiers: [
+        {
+          name: "offset",
+          options: {
+            offset: [0, 8],
+          },
+        },
+      ],
+    });
   });
 }

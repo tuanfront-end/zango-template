@@ -84,7 +84,7 @@ function Navigation() {
                 strict
                 to={i.link}
                 className="block px-4 py-3 hover:bg-gray-100 tracking-wider"
-                activeClassName="text-primary"
+                activeClassName="text-secondary"
               >
                 {i.name}
                 {i.children && (
@@ -110,7 +110,7 @@ function Navigation() {
           strict
           className="inline-flex items-center p-2 xl:px-2.5 2xl:px-3 uppercase text-white"
           to={item.link}
-          activeClassName="text-primary"
+          activeClassName="text-secondary"
         >
           {item.name}
           {item.children && (
