@@ -18,6 +18,8 @@ const Button: FC<ButtonProps> = ({
   let classes =
     `ttnc-button inline-flex items-center justify-center text-center py-4 px-6 sm:px-8 2xl:px-12 text-xs 2xl:text-sm leading-none tracking-widest` +
     " " +
+    "hover:bg-secondary hover:text-white hover:border-secondary dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary" +
+    " " +
     containerClassName;
 
   if (!!url) {

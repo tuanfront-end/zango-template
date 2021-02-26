@@ -9,7 +9,7 @@ export default function SearchInput({
 }: SearchInputProps) {
   return (
     <form
-      className={`wil-search-form relative flex-shrink-0 w-52 ${containerClassName}`}
+      className={`wil-search-form relative flex-shrink-0 w-40 xl:w-52 ${containerClassName}`}
     >
       <button
         type="submit"

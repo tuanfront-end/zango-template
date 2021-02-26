@@ -65,12 +65,8 @@ const Modal: React.FC<ModalProps> = ({
     }
     return (
       <div className="flex justify-end px-6 py-4 space-x-4 border-t border-solid border-neutral-700 rounded-b">
-        <Button size="small" modalToggleId={id}>
-          small button
-        </Button>
-        <Button size="small" modalToggleId={id}>
-          small button
-        </Button>
+        <Button modalToggleId={id}>small button</Button>
+        <Button modalToggleId={id}>small button</Button>
       </div>
     );
   };

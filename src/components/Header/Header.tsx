@@ -1,6 +1,7 @@
 import Dropdown from "components/Dropdown/Dropdown";
 import DropdownPanel from "components/Dropdown/DropdownPanel";
 import DropdownTrigger from "components/Dropdown/DropdownTrigger";
+import Logo from "components/Logo/Logo";
 import MenuBar from "components/MenuBar/MenuBar";
 import Navigation from "components/Navigation/Navigation";
 import SearchInput from "components/SearchInput/SearchInput";
@@ -10,24 +11,24 @@ import MiniCartContent from "./MiniCartContent";
 export default function Header() {
   const _renderUserDropdown = () => {
     return (
-      <div className="py-1">
+      <div className="py-1 dark:bg-gray-900 text-sm text-gray-700 dark:text-gray-100">
         <a
-          href="#"
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          href="#root"
+          className="block px-4 py-2  hover:bg-gray-100 dark:hover:bg-gray-700"
         >
           <i className="las la-user mr-2"></i>
           Your Profile
         </a>
         <a
-          href="#"
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          href="#root"
+          className="block px-4 py-2  hover:bg-gray-100 dark:hover:bg-gray-700"
         >
           <i className="las la-cog mr-2"></i>
           Settings
         </a>
         <a
-          href="#"
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          href="#root"
+          className="block px-4 py-2  hover:bg-gray-100 dark:hover:bg-gray-700"
         >
           <i className="las la-sign-out-alt mr-2"></i>
           Sign out
@@ -38,15 +39,20 @@ export default function Header() {
 
   return (
     <div className="ttnc-Header bg-accents-900 border-b border-accents-800 py-6 px-4 md:px-10 2xl:px-16">
-      <div className="flex justify-between items-center space-x-4 lg:space-x-8">
-        <div className="flex justify-start items-center flex-shrink-0 lg:w-0 lg:flex-1 space-x-7">
+      <div className="relative flex justify-between items-center space-x-4 lg:space-x-8">
+        <div className="flex justify-start items-center flex-shrink-0 lg:w-0 lg:flex-1 space-x-4 xl:space-x-7">
           <MenuBar />
           <div className="hidden md:block">
             <SearchInput />
           </div>
         </div>
-        <Navigation />
-        <div className="lg:w-0 lg:flex-1 flex-shrink-0 flex items-center justify-end text-white xl:text-2xl text-xl">
+        <div>
+          <Navigation />
+          <span className="block lg:hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <Logo />
+          </span>
+        </div>
+        <div className="lg:w-0 lg:flex-1 flex-shrink-0 flex items-center justify-end text-white text-2xl ">
           <Dropdown>
             <DropdownTrigger containerClassName="mr-4 2xl:mr-5">
               <i className="las la-user-circle"></i>

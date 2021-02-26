@@ -58,13 +58,13 @@ const QuickViewProduct: React.FC<QuickViewProductProps> = ({
               defaultValue="1"
               className="w-14 sm:w-20 mr-1 sm:mr-4 border border-gray-600 text-gray-700"
             />
-            <Button containerClassName="bg-gray-700 text-white uppercase text-xs border border-gray-700 hover:bg-gray-900">
+            <Button containerClassName="bg-gray-700 text-white uppercase text-xs border border-gray-700">
               Add to card
             </Button>
           </div>
-          <a className="flex items-center space-x-1 mb-3" href="#root">
+          <a className="flex items-center space-x-2 mb-3" href="#root">
             <HeartIcon />
-            Add to wishlist
+            <span> Add to wishlist</span>
           </a>
           <div className="product_meta text-sm flex flex-col text-gray-500 dark:text-gray-400">
             <span className="sku_wrapper text-gray-800 dark:text-gray-100">
@@ -94,7 +94,7 @@ const QuickViewProduct: React.FC<QuickViewProductProps> = ({
         className="hidden overflow-hidden fixed inset-0 z-max outline-none focus:outline-none justify-center items-center p-8"
         id={id}
       >
-        <div className="my-6 overflow-auto max-w-7xl max-h-full">
+        <div className="my-6 overflow-auto max-w-6xl max-h-full">
           {/* <!--content--> */}
           <div className="relative shadow-lg flex flex-col w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white  outline-none focus:outline-none">
             <div className="absolute right-2 top-2">

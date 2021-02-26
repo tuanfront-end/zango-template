@@ -1,24 +1,33 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import p1Img from "images/p1.png";
 import MyLink from "components/MyLink/MyLink";
 
 export interface Card1Props {
   img?: string;
-  name?: string;
+  name?: ReactNode;
+  textColor?: string;
+  containerClassName?: string;
 }
-const Card1: React.FC<Card1Props> = ({ img, name }) => {
+const Card1: React.FC<Card1Props> = ({
+  img,
+  name,
+  containerClassName = "aspect-w-1 aspect-h-1",
+  textColor = "text-gray-900",
+}) => {
   return (
-    <div className="aspect-w-1 aspect-h-1 bg-gray-400 relative group">
+    <div className={`bg-gray-400 relative group ${containerClassName}`}>
       <img
         className="w-full h-full object-cover"
         src={img || p1Img}
         alt="Product some"
       />
-      <div className="absolute inset-0 pl-10 pb-14 flex flex-col justify-end text-gray-900">
+      <div
+        className={`absolute inset-0 pl-10 pb-14 flex flex-col justify-end ${textColor}`}
+      >
         <span className="transition-all block text-2xl font-medium mb-3 group-hover:text-secondary">
           {name || `Running shoes`}
         </span>
-        <MyLink containerClassName="group-hover:text-secondary">
+        <MyLink containerClassName="group-hover:text-secondary text-xs">
           Shop now
         </MyLink>
       </div>

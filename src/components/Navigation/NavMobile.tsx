@@ -31,7 +31,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ modalId, data }) => {
               data-ttnc-hidden-toggle={
                 i.children ? "ttnc-" + i.link + i.id : undefined
               }
-              activeClassName="text-primary"
+              activeClassName="text-secondary"
             >
               {i.name}
               {i.children && <i className="ml-1 las la-angle-down"></i>}
@@ -49,7 +49,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ modalId, data }) => {
         <NavLink
           exact
           strict
-          className={`inline-flex items-center py-2 px-4 text-link-medium font-medium uppercase`}
+          className={`inline-flex items-center py-2 px-4 font-medium uppercase text-sm`}
           to={item.link}
           data-ttnc-hidden-toggle={"ttnc-" + item.link + item.id}
           activeClassName="text-secondary"

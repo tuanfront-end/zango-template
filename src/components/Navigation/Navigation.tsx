@@ -1,12 +1,13 @@
 import Logo from "components/Logo/Logo";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { LocationStates } from "routers/types";
 
 export interface NavItemType {
   id: number;
   name: string;
-  // link: keyof LocationStates | "#";
-  link: string;
+  link: keyof LocationStates | "#";
+  // link: string;
   children?: NavItemType[];
   isActive?: boolean;
 }
@@ -19,23 +20,22 @@ export const NAV_DATABASE: NavItemType[] = [
     children: [
       { id: 3, name: "Home 1", link: "/" },
       { id: 2, name: "Home 2", link: "/home2" },
+      { id: 4, name: "Home 3", link: "/home3" },
     ],
   },
 
   {
     id: 11,
     name: "About",
-    link: "/our-story",
+    link: "/about-us",
   },
   {
     id: 16,
     name: "Shop",
-    link: "/volunteer",
+    link: "/",
     children: [
-      { id: 17, name: "Volunteer", link: "/volunteer" },
-      { id: 18, name: "Events", link: "/events" },
-      { id: 19, name: "Programs", link: "/programs" },
-      { id: 20, name: "Careers", link: "/careers" },
+      { id: 17, name: "Card", link: "/cart" },
+      { id: 18, name: "Checkout", link: "/checkout" },
     ],
   },
   {
@@ -56,14 +56,11 @@ export const NAV_DATABASE: NavItemType[] = [
   {
     id: 4,
     name: "Pages",
-    link: "/c-alerts",
+    link: "/",
     children: [
-      { id: 5, name: "Alerts", link: "/c-alerts" },
-      { id: 6, name: "Buttons", link: "/c-buttons" },
-      { id: 7, name: "Avatars", link: "/c-avatars" },
-      { id: 8, name: "Forms Layout", link: "/c-form-layout" },
-      { id: 9, name: "Messages", link: "/c-messages" },
-      { id: 10, name: "Dropdown - Modal", link: "/c-modal-dropdown" },
+      { id: 7, name: "Avatars", link: "/" },
+      { id: 8, name: "Forms Layout", link: "/" },
+      { id: 9, name: "Messages", link: "/" },
     ],
   },
 ];
@@ -73,17 +70,17 @@ function Navigation() {
   const _renderMenuChild = (item: NavItemType, className = "top-full") => {
     return (
       <div className={`sub-menu absolute py-3 px-2 z-50 w-52 ${className}`}>
-        <div className="bg-white shadow-lg ring-1 ring-black ring-opacity-5 py-1">
+        <div className="bg-white dark:bg-gray-900 shadow-lg ring-1 ring-black ring-opacity-5 py-1">
           {item.children?.map((i, index) => (
             <div
               key={i.link + index}
-              className="relative menu-item-has-children text-gray-900"
+              className="relative menu-item-has-children text-gray-900 dark:text-gray-100 uppercase text-xs font-medium"
             >
               <NavLink
                 exact
                 strict
                 to={i.link}
-                className="block px-4 py-3 hover:bg-gray-100 tracking-wider capitalize"
+                className="block px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 tracking-wider"
                 activeClassName="text-secondary"
               >
                 {i.name}
@@ -108,7 +105,7 @@ function Navigation() {
         <NavLink
           exact
           strict
-          className="inline-flex items-center p-2 xl:px-3 uppercase text-white opacity-95"
+          className="inline-flex items-center p-2 xl:px-3 text-white uppercase font-medium text-xs xl:text-sm opacity-95"
           to={item.link}
           activeClassName="font-semibold opacity-100"
         >
