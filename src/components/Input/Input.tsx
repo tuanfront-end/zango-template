@@ -1,6 +1,7 @@
 import React from "react";
 export interface InputProps {
   containerClassName?: string;
+  inputClass?: string;
   placeholder?: string;
   label?: string;
   name: string;
@@ -8,6 +9,7 @@ export interface InputProps {
 }
 const Input: React.FC<InputProps> = ({
   containerClassName = "",
+  inputClass = "",
   name,
   placeholder = "",
   label = "",
@@ -28,7 +30,7 @@ const Input: React.FC<InputProps> = ({
           id={name}
           type={type}
           name={name}
-          className="focus:ring-action-primary focus:border-primary flex-1 block w-full sm:text-sm border-action-primary"
+          className={`focus:ring-action-primary focus:border-primary flex-1 block w-full sm:text-sm border-action-primary ${inputClass}`}
           placeholder={placeholder}
         />
       </div>

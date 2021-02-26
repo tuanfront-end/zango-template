@@ -30,7 +30,7 @@ const Routes = () => {
       <Footer />
 
       {/* === MODAL... === */}
-      <QuickViewProduct />
+      {/* <QuickViewProduct /> */}
     </BrowserRouter>
   );
 };

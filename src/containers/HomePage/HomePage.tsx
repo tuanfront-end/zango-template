@@ -5,11 +5,12 @@ import p2Img from "images/p2.png";
 import p3Img from "images/p3.png";
 import React from "react";
 import SectionDeal from "./SectionDeal";
+import SectionLogoClounds from "./SectionLogoClounds";
 import SectionTrens from "./SectionTrens";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="pb-14 bg-white dark:bg-gray-800">
       <div className="fixed top-0 left-0 z-max">
         <SwithNightMode />
       </div>
@@ -26,6 +27,7 @@ export default function HomePage() {
       <SectionTrens />
       <SectionDeal />
       <SectionTrens />
+      <SectionLogoClounds />
     </div>
   );
 }

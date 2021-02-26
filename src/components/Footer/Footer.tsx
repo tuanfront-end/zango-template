@@ -1,8 +1,9 @@
 import React from "react";
 import FooterWidgetNav from "components/FooterWidgetNav/FooterWidgetNav";
 import Logo from "components/Logo/Logo";
-import Input from "components/Input/Input";
 import Button from "components/Button/Button";
+import logoFooter from "images/logoFooter.png";
+import payment from "images/payment.png";
 
 export default function Footer() {
   const _renderListSocial = () => {
@@ -32,40 +33,60 @@ export default function Footer() {
   };
 
   return (
-    <footer className="ttnc-footer bg-white dark:bg-black pt-8">
-      <div className="container space-y-10">
-        <ul className="flex flex-wrap justify-between">
-          <li className="flex-shrink-0 w-full lg:w-auto space-y-6 mr-8 my-8">
-            <Logo />
-            {_renderListSocial()}
-          </li>
-          <li className="mr-8 my-4">
-            <FooterWidgetNav />
-          </li>
-          <li className="mr-8 my-4">
-            <FooterWidgetNav dataIndex={1} />
-          </li>
-          <li className="mr-8 my-4">
-            <FooterWidgetNav dataIndex={2} />
-          </li>
-          <li className="w-full max-w-xs lg:max-w-sm my-4">
-            <form action="#" method="post" className="grid grid-cols-1 gap-6">
-              <Input name="footerName" label="Name" />
-              <Input name="footerEmail" label="Email Address" type="email" />
-              <Button size="small">Subscribe</Button>
-            </form>
-          </li>
-        </ul>
-        <div className="text-center pb-4 text-gray-800 dark:text-gray-200">
-          Copyright © 2021. Powered by TTNC-themes |{" "}
-          <a
-            className=""
-            href="#root"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Licensing
-          </a>
+    <footer className="ttnc-footer bg-gray-800 text-white">
+      <div className="container">
+        <div className="py-14 lg:py-20 text-center">
+          <h2 className="text-lg uppercase mb-3">join our list</h2>
+          <span className="block text-sm text-gray-300 mb-10">
+            Get timely updates from your favorite products
+          </span>
+          <div className="flex justify-center">
+            <input
+              type="text"
+              name="ttnc-footer-email"
+              placeholder="Email address"
+              className="w-11/12 md:w-5/12 bg-transparent border border-gray-700"
+            />
+
+            <Button containerClassName="text-white bg-gray-700 border border-gray-700 uppercase">
+              Subscribe
+            </Button>
+          </div>
+        </div>
+        <div className="py-14 border-t border-gray-700 text-gray-400">
+          <div className="grid grid-cols-1 sm:grid-cols-6 gap-8 2xl:gap-14">
+            <div className="col-span-3 lg:col-span-2 grid grid-cols-1 md:grid-cols-7 gap-8 2xl:gap-14">
+              <div className="col-span-4">
+                <FooterWidgetNav />
+              </div>
+              <div className="col-span-3">
+                <FooterWidgetNav dataIndex={1} />
+              </div>
+            </div>
+            <div className="hidden lg:flex flex-col items-center justify-center col-span-2 border-l border-r border-gray-700 px-8">
+              <Logo img={logoFooter} />
+              <span className="mt-7 text-center font-LibreFranklin text-sm">
+                Showed a lady fitted out with a fur hat and fur boa who sat
+                upright, raising
+              </span>
+            </div>
+            <div className="col-span-3 lg:col-span-2 grid grid-cols-1 md:grid-cols-7 gap-8 2xl:gap-14">
+              <div className="col-span-4">
+                <FooterWidgetNav dataIndex={2} />
+              </div>
+              <div className="col-span-3">
+                <FooterWidgetNav dataIndex={3} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="text-center py-8 border-t border-gray-700 text-gray-400">
+        <div className="container flex-col md:flex-row flex items-center justify-between space-y-4 md:space-y-0">
+          <span className="text-sm font-LibreFranklin">
+            Copyright © zango clothing shop. All Rights Reserved
+          </span>
+          <img src={payment} alt="" />
         </div>
       </div>
     </footer>

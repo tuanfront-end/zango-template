@@ -21,8 +21,8 @@ const SectionDeal = () => {
   return (
     <div className="ttnc-SectionDeal py-8 md:py-14 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
       <div className="container">
-        <div className="grid grid-cols-12 gap-8">
-          <div className="col-start-1 col-span-12 md:col-span-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-8">
+          <div className="col-start-1 md:col-span-5">
             <Heading>
               DEAL <br /> of the day
             </Heading>
@@ -44,7 +44,7 @@ const SectionDeal = () => {
                 lady fitted out with a fur hat and fur boa who sat upright
                 raising a heavy fur muff
               </span>
-              <div className="mb-10 flex space-x-3">
+              <div id="ttnc-countDownDateTime" className="mb-10 flex space-x-3">
                 {_renderDateCountDown()}
                 {_renderDateCountDown("ttnc-countDownDateTime__hours", "hours")}
                 {_renderDateCountDown("ttnc-countDownDateTime__mins", "mins")}
@@ -58,7 +58,7 @@ const SectionDeal = () => {
               </Button>
             </div>
           </div>
-          <div className="col-end-13 col-span-12 md:col-span-7 flex items-center justify-center">
+          <div className="md:col-end-13 md:col-span-7 flex items-center justify-center">
             <img className="w-full h-auto object-cover" src={pDeal} alt="" />
           </div>
         </div>

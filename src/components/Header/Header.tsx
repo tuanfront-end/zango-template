@@ -12,7 +12,9 @@ export default function Header() {
       <div className="flex justify-between items-center space-x-4 lg:space-x-8">
         <div className="flex justify-start items-center flex-shrink-0 lg:w-0 lg:flex-1 space-x-7">
           <MenuBar />
-          <SearchInput />
+          <div className="hidden md:block">
+            <SearchInput />
+          </div>
         </div>
         <Navigation />
         <div className="lg:w-0 lg:flex-1 flex-shrink-0 flex items-center font-light justify-end text-white xl:text-2xl text-xl">

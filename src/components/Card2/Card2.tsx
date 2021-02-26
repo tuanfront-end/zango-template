@@ -2,6 +2,7 @@ import React from "react";
 import p4Img from "images/p4.png";
 import p3Img from "images/p2.png";
 import ListIconOnCard from "components/ListIconOnCard/ListIconOnCard";
+import QuickViewProduct from "components/QuickViewProduct/QuickViewProduct";
 
 export interface Card2Props {
   img?: string;
@@ -13,6 +14,7 @@ export interface Card2Props {
 const Card2: React.FC<Card2Props> = ({ img, img2, name, price, saleUp }) => {
   return (
     <div className="group relative">
+      <QuickViewProduct />
       {saleUp && (
         <div className="absolute right-0 top-8 z-20">
           <span className="py-2 px-3 bg-secondary text-white">{saleUp}</span>

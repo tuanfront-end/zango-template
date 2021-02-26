@@ -1,4 +1,5 @@
 import Card2 from "components/Card2/Card2";
+import QuickViewProduct from "components/QuickViewProduct/QuickViewProduct";
 import SectionHeading from "components/SectionHeading/SectionHeading";
 import React from "react";
 
@@ -6,7 +7,7 @@ const SectionTrens = () => {
   return (
     <div className="ttnc-SectionTrens py-8 md:py-14 bg-white dark:bg-gray-800">
       <div className="container">
-        <div className="glide" ttnc-data-glide-gap={100}>
+        <div className="glide" ttnc-data-glide-gap={32}>
           <SectionHeading />
           <div className="glide__track" data-glide-el="track">
             <ul className="glide__slides">

@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = ({
   modalToggleId,
 }) => {
   let classes =
-    `ttnc-button inline-flex items-center justify-center text-center py-3 xl:py-4 px-10 2xl:px-12 text-xs 2xl:text-sm leading-none tracking-widest` +
+    `ttnc-button inline-flex items-center justify-center text-center py-4 px-8 2xl:px-12 text-xs 2xl:text-sm leading-none tracking-widest` +
     " " +
     containerClassName;
 
