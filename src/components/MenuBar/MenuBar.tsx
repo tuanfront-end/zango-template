@@ -8,8 +8,14 @@ const MenuBar = () => {
 
   return (
     <div>
-      <a href="#root" data-ttnc-modal-toggle={navMobileId}>
-        <img src={bar} alt="bar-icon" />
+      <a
+        className="flex flex-col items-end space-y-2"
+        href="#root"
+        data-ttnc-modal-toggle={navMobileId}
+      >
+        <div className="w-6 border-b border-white"></div>
+        <div className="w-6 border-b border-white"></div>
+        <div className="w-9 border-b border-white"></div>
       </a>
 
       <div

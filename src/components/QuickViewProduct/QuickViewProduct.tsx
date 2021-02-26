@@ -1,56 +1,89 @@
 import Button from "components/Button/Button";
 import ButtonClose from "components/ButtonClose/ButtonClose";
+import HeartIcon from "components/HeartIcon/HeartIcon";
 import React from "react";
 
-export const QuickViewProductModalId = "ttnc-QuickViewProductModalId";
-const id = QuickViewProductModalId;
-const QuickViewProduct = () => {
-  const _renderHeader = () => {
-    return (
-      <div className="flex items-start justify-between px-6 py-4 pb-3 border-b border-solid border-neutral-700">
-        <div className="flex text-neutral-300">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="w-6 h-6 mr-2"
-          >
-            <path
-              fillRule="evenodd"
-              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-              clipRule="evenodd"
-            />
-          </svg>
-          <h3 className="text-f5 font-bold text-black truncate">modalTitle</h3>
-        </div>
-        <ButtonClose modalToggleId={id} />
-      </div>
-    );
-  };
+export interface QuickViewProductProps {
+  id: string;
+  name?: string;
+  img?: string;
+  price?: string;
+  oldPrice?: string;
+}
 
+const QuickViewProduct: React.FC<QuickViewProductProps> = ({
+  id,
+  name,
+  img,
+  price,
+  oldPrice,
+}) => {
   const _renderBody = () => {
     return (
-      <div className="relative p-6 flex-auto">
-        <p className="my-4 leading-relaxed">
-          I always felt like I could do anything. That’s the main thing people
-          are controlled by! Thoughts- their perception of themselves! They're
-          slowed down by their perception of themselves. If you're taught you
-          can’t do anything, you won’t do anything. I was taught I could do
-          everything.
-        </p>
-      </div>
-    );
-  };
-
-  const _renderFooter = () => {
-    return (
-      <div className="flex justify-end px-6 py-4 space-x-4 border-t border-solid border-neutral-700 rounded-b">
-        <Button size="small" modalToggleId={id}>
-          small button
-        </Button>
-        <Button size="small" modalToggleId={id}>
-          small button
-        </Button>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 p-4 sm:p-8">
+        <div className="flex items-center justify-center">
+          <img src={img} alt={name} />
+        </div>
+        <div className="py-8">
+          <h2 className="text-3xl lg:text-4xl 2xl:text-5xl mb-5">{name}</h2>
+          <div className="flex text-base space-x-4 mb-2">
+            <span className="block">{price || `154$`}</span>
+            {oldPrice && (
+              <span className="block line-through text-gray-400">
+                {oldPrice}
+              </span>
+            )}
+          </div>
+          <div className="flex items-center space-x-1 text-secondary mb-6 text-sm">
+            <i className="las la-star"></i>
+            <i className="las la-star"></i>
+            <i className="las la-star"></i>
+            <i className="las la-star"></i>
+            <i className="las la-star-half"></i>
+            <span className="text-gray-700 dark:text-gray-300">
+              (2 Customer review)
+            </span>
+          </div>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            I always felt like I could do anything. That’s the main thing people
+            are controlled by! Thoughts- their perception of themselves! They're
+            slowed down by their perception of themselves. If you're taught you
+            can’t do anything, you won’t do anything. praesentium temporibus,
+            veniam quod repellendus vitae exercitationem,
+          </p>
+          <div className="flex my-6">
+            <input
+              type="number"
+              name="sluong"
+              defaultValue="1"
+              className="w-14 sm:w-20 mr-1 sm:mr-4 border border-gray-600 text-gray-700"
+            />
+            <Button containerClassName="bg-gray-700 text-white uppercase text-xs border border-gray-700 hover:bg-gray-900">
+              Add to card
+            </Button>
+          </div>
+          <a className="flex items-center space-x-1 mb-3" href="#root">
+            <HeartIcon />
+            Add to wishlist
+          </a>
+          <div className="product_meta text-sm flex flex-col text-gray-500 dark:text-gray-400">
+            <span className="sku_wrapper text-gray-800 dark:text-gray-100">
+              SKU: <span className="sku">71236-1</span>
+            </span>
+            <span className="posted_in ">
+              <span className="text-gray-800 dark:text-gray-100">
+                Categories:
+              </span>{" "}
+              <a href="#root">Clothing</a>, <a href="#root">Tops</a>,{" "}
+              <a href="#root">Women</a>
+            </span>
+            <span className="tagged_as ">
+              <span className="text-gray-800 dark:text-gray-100">Tags:</span>{" "}
+              <a href="#root">Button</a>, <a href="#root">Red</a>,{" "}
+              <a href="#root">Tshirt</a>
+            </span>
+          </div>
+        </div>
       </div>
     );
   };
@@ -58,23 +91,21 @@ const QuickViewProduct = () => {
   return (
     <React.Fragment>
       <div
-        className="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-max outline-none focus:outline-none justify-center items-center"
+        className="hidden overflow-hidden fixed inset-0 z-max outline-none focus:outline-none justify-center items-center p-8"
         id={id}
       >
-        <div className="relative w-auto my-6 mx-auto max-w-3xl">
+        <div className="my-6 overflow-auto max-w-7xl max-h-full">
           {/* <!--content--> */}
-          <div className="border-0 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-            {/* <!--header--> */}
-            {_renderHeader()}
-            {/* <!--body--> */}
+          <div className="relative shadow-lg flex flex-col w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white  outline-none focus:outline-none">
+            <div className="absolute right-2 top-2">
+              <ButtonClose modalToggleId={id} />
+            </div>
             {_renderBody()}
-            {/* <!--footer--> */}
-            {_renderFooter()}
           </div>
         </div>
       </div>
       <div
-        className="hidden opacity-30 fixed inset-0 z-40 bg-black"
+        className="hidden opacity-60 fixed inset-0 z-40 bg-black dark:bg-white"
         id={`${id}-backdrop`}
         data-ttnc-modal-toggle={id}
       ></div>

@@ -101,6 +101,22 @@ function _toggleModal() {
       const b = document.getElementById(modalID + "-backdrop");
       if (!a || !b) return;
 
+      // === Xu ly neu modal nam trong glide__slides (bi transform nen se ko hoat dong)
+      let i = 0;
+      let parent = a.parentElement;
+      while (parent && !parent.classList.contains("glide__slides") && i < 8) {
+        i++;
+        parent = parent.parentElement;
+      }
+      if (parent && parent.classList.contains("glide__slides")) {
+        if (a.classList.contains("hidden")) {
+          parent.classList.add("ttnc-transform-none");
+        } else {
+          parent.classList.remove("ttnc-transform-none");
+        }
+      }
+      //
+
       a.classList.toggle("hidden");
       b.classList.toggle("hidden");
       a.classList.toggle("flex");
@@ -186,9 +202,22 @@ function _newGlideCarousel() {
   };
   const _intantSlide = (element) => {
     const gap = Number(element.getAttribute("ttnc-data-glide-gap")) || 0;
+    const perView =
+      Number(element.getAttribute("ttnc-data-glide-item-per-row")) || 4;
     const glide = new Glide(element, {
       rewind: true,
       gap,
+      perView: 4,
+      breakpoints: {
+        1100: {
+          perView: 3,
+          gap: 20,
+        },
+        800: {
+          perView: 2,
+          gap: 16,
+        },
+      },
     });
     glide.mount();
   };

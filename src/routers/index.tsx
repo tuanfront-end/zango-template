@@ -4,9 +4,6 @@ import HomePage from "containers/HomePage/HomePage";
 import { Page } from "./types";
 import Header from "components/Header/Header";
 import Footer from "components/Footer/Footer";
-import QuickViewProduct, {
-  QuickViewProductModalId,
-} from "components/QuickViewProduct/QuickViewProduct";
 
 export const pages: Page[] = [{ path: "/", exact: true, component: HomePage }];
 

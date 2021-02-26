@@ -1,5 +1,6 @@
 import React from "react";
-import pDeal from "images/pDeal.png";
+// import pDeal from "images/pDeal.png";
+import pDeal from "images/pDeal2.png";
 import Heading from "components/Heading/Heading";
 import Button from "components/Button/Button";
 
@@ -52,7 +53,7 @@ const SectionDeal = () => {
               </div>
               <Button
                 url="#root"
-                containerClassName="border border-black bg-black text-white hover:bg-white hover:text-black uppercase"
+                containerClassName="border border-gray-900 bg-black text-white hover:bg-white hover:text-black uppercase"
               >
                 Shop now
               </Button>

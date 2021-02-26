@@ -72,18 +72,18 @@ const DATA: NavItemType[] = NAV_DATABASE;
 function Navigation() {
   const _renderMenuChild = (item: NavItemType, className = "top-full") => {
     return (
-      <div className={`sub-menu absolute py-3 px-2 z-50 w-60 ${className}`}>
+      <div className={`sub-menu absolute py-3 px-2 z-50 w-52 ${className}`}>
         <div className="bg-white shadow-lg ring-1 ring-black ring-opacity-5 py-1">
           {item.children?.map((i, index) => (
             <div
               key={i.link + index}
-              className="relative menu-item-has-children text-gray-800"
+              className="relative menu-item-has-children text-gray-900"
             >
               <NavLink
                 exact
                 strict
                 to={i.link}
-                className="block px-4 py-3 hover:bg-gray-100 tracking-wider"
+                className="block px-4 py-3 hover:bg-gray-100 tracking-wider capitalize"
                 activeClassName="text-secondary"
               >
                 {i.name}
@@ -108,9 +108,9 @@ function Navigation() {
         <NavLink
           exact
           strict
-          className="inline-flex items-center p-2 xl:px-2.5 2xl:px-3 uppercase text-white"
+          className="inline-flex items-center p-2 xl:px-3 uppercase text-white opacity-95"
           to={item.link}
-          activeClassName="text-secondary"
+          activeClassName="font-semibold opacity-100"
         >
           {item.name}
           {item.children && (
@@ -124,9 +124,9 @@ function Navigation() {
 
   return (
     <div>
-      <nav className="hidden lg:flex flex-wrap items-center text-xs xl:text-sm font-medium uppercase">
+      <nav className="hidden lg:flex flex-wrap items-center text-xs xl:text-sm uppercase">
         {[DATA[0], DATA[1], DATA[2]].map(_renderItem)}
-        <div className="px-2 xl:px-2.5 2xl:px-3">
+        <div className="px-2 xl:px-3">
           <Logo />
         </div>
         {[DATA[3], DATA[4], DATA[5]].map(_renderItem)}

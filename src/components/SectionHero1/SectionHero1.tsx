@@ -15,7 +15,7 @@ const SectionHero1 = () => {
           alt="Stylish shop"
           style={{ minHeight: "70vh" }}
         />
-        <div className="absolute inset-0 flex items-start lg:items-center pt-8 lg:pt-0">
+        <div className="absolute inset-0 flex items-start lg:items-center py-12 lg:py-0">
           <div className="container">
             <div className="w-full lg:w-2/4 xl:pr-10 text-white uppercase">
               <span className="text-sm xl:text-lg 2xl:text-1.5xl block font-LibreFranklin tracking-sub-title-540 font-light mb-4 lg:mb-8">
@@ -42,7 +42,7 @@ const SectionHero1 = () => {
                 )}
               </h1>
               <Button
-                containerClassName="border border-white bg-transparent hover:bg-black"
+                containerClassName="border border-white hover:border-black bg-transparent hover:bg-black"
                 url="#root"
               >
                 Shop now

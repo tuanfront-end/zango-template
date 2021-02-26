@@ -1,10 +1,15 @@
-import { QuickViewProductModalId } from "components/QuickViewProduct/QuickViewProduct";
 import ToolTip2 from "components/ToolTip2/ToolTip2";
 import ToolTip2Panel from "components/ToolTip2/ToolTip2Panel";
 import ToolTip2Trigger from "components/ToolTip2/ToolTip2Trigger";
 import React from "react";
 
-const ListIconOnCard = () => {
+export interface ListIconOnCardProps {
+  quickViewModalId: string;
+}
+
+const ListIconOnCard: React.FC<ListIconOnCardProps> = ({
+  quickViewModalId,
+}) => {
   const classes =
     "w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white text-gray-700 shadow-lg";
   const svgClass = "h-5 w-5 md:w-6 md:h-6";
@@ -15,7 +20,7 @@ const ListIconOnCard = () => {
         <ToolTip2Trigger>
           <div
             className={`${classes}`}
-            data-ttnc-modal-toggle={QuickViewProductModalId}
+            data-ttnc-modal-toggle={quickViewModalId}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
