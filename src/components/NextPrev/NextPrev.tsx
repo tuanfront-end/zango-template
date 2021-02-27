@@ -15,13 +15,13 @@ const NextPrev: FC<NextPrevProps> = ({
       data-glide-el="controls"
     >
       <button
-        className={`${btnClass} flex items-center justify-center w-9 h-9 md:h-12 md:w-12 `}
+        className={`${btnClass} flex items-center justify-center w-9 h-9 md:h-11 md:w-11 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white`}
         data-glide-dir="<"
       >
         <i className="las la-angle-left"></i>
       </button>
       <button
-        className={`${btnClass} flex items-center justify-center w-9 h-9 md:h-12 md:w-12 `}
+        className={`${btnClass} flex items-center justify-center w-9 h-9 md:h-11 md:w-11 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white`}
         data-glide-dir=">"
       >
         <i className="las la-angle-right"></i>

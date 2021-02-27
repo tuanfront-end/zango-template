@@ -11,7 +11,10 @@ const SectionProducts: React.FC<SectionProductsProps> = ({ cards }) => {
     <div className="ttnc-SectionProducts py-8 md:py-14 bg-white dark:bg-gray-800">
       <div className="container">
         <div className="flex items-center justify-center space-x-12 uppercase text-gray-900 dark:text-gray-100 text-base mb-6 font-medium">
-          <a href="#root" className="inline-block border-b border-gray-800">
+          <a
+            href="#root"
+            className="inline-block border-b border-gray-800 dark:border-gray-300"
+          >
             New arrival
           </a>
           <a href="#root">Best sellers</a>

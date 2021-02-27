@@ -72,7 +72,7 @@ const SectionHero2 = () => {
         <div className="absolute bottom-12 2xl:bottom-20 left-0 w-full px-4 md:px-10">
           <div className="flex items-center justify-start sm:justify-between text-gray-900">
             <div className="flex-shrink-0 hidden sm:flex items-center">
-              <div className="flex space-x-3 dark:text-gray-100 text-xl">
+              <div className="flex space-x-3 text-xl">
                 <a href="#root">
                   <i className="lab la-facebook-f"></i>
                 </a>

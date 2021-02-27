@@ -4,7 +4,6 @@ import React from "react";
 import SectionDeal from "./SectionDeal";
 import SectionLogoClounds from "./SectionLogoClounds";
 import card3_p3 from "images/card3_p3.png";
-
 import home2P1 from "images/home2_p1.png";
 import home2P2 from "images/home2_p2.png";
 import home2P3 from "images/home2_p3.png";
@@ -21,9 +20,11 @@ import p13 from "images/p13.png";
 import p15 from "images/p15.png";
 import p16 from "images/p16.png";
 import SectionHero2 from "components/SectionHero2/SectionHero2";
-import { spawn } from "child_process";
+import Header2 from "components/Header2/Header2";
 import SectionProducts from "./SectionProducts";
 import Card3 from "components/Card3/Card3";
+import SectionFeatures from "./SectionFeatures";
+
 export default function HomePage2() {
   const cards: Card2Props[] = [
     {
@@ -152,6 +153,9 @@ export default function HomePage2() {
 
   return (
     <div className="pb-14 bg-white dark:bg-gray-800">
+      {/*  */}
+      <Header2 />
+      {/*  */}
       <SectionHero2 />
       <section className="py-8 md:py-14 bg-white dark:bg-gray-800">
         <div className="container">
@@ -212,9 +216,8 @@ export default function HomePage2() {
           />
         </div>
       </div>
-      <SectionDeal />
-      {/* <SectionTrens cards={cards2} /> */}
-      <SectionLogoClounds />
+      {/* <SectionDeal /> */}
+      <SectionFeatures />
     </div>
   );
 }

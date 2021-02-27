@@ -16,7 +16,7 @@ const Routes = () => {
   return (
     <BrowserRouter>
       {/* === HEADER... === */}
-      <Header />
+      {/* <Header /> */}
 
       {/* === PAGE CONTENT... === */}
       <Switch>
