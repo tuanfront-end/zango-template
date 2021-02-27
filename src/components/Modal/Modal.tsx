@@ -87,6 +87,8 @@ const Modal: React.FC<ModalProps> = ({
       <div
         className="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-max outline-none focus:outline-none justify-center items-center"
         id={id}
+        data-ttnc-modal-toggle-class-in-from={undefined}
+        data-ttnc-modal-toggle-class-in-to={undefined}
       >
         <div className="relative w-auto my-6 mx-auto max-w-3xl">
           {/* <!--content--> */}

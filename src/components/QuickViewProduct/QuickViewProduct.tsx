@@ -94,7 +94,7 @@ const QuickViewProduct: React.FC<QuickViewProductProps> = ({
         className="hidden overflow-hidden fixed inset-0 z-max outline-none focus:outline-none justify-center items-center p-8"
         id={id}
       >
-        <div className="my-6 overflow-auto max-w-6xl max-h-full">
+        <div className="my-6 overflow-auto max-w-6xl max-h-full relative z-20">
           {/* <!--content--> */}
           <div className="relative shadow-lg flex flex-col w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white  outline-none focus:outline-none">
             <div className="absolute right-2 top-2">
@@ -103,12 +103,12 @@ const QuickViewProduct: React.FC<QuickViewProductProps> = ({
             {_renderBody()}
           </div>
         </div>
+        <div
+          className="hidden opacity-90 fixed inset-0 z-10 bg-black dark:bg-white"
+          id={`${id}-backdrop`}
+          data-ttnc-modal-toggle={id}
+        ></div>
       </div>
-      <div
-        className="hidden opacity-60 fixed inset-0 z-40 bg-black dark:bg-white"
-        id={`${id}-backdrop`}
-        data-ttnc-modal-toggle={id}
-      ></div>
     </React.Fragment>
   );
 };

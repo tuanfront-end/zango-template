@@ -89,6 +89,7 @@ function _toggleHiddenClass() {
     });
   });
 }
+
 function _toggleModal() {
   const btnToggle = [...document.querySelectorAll(`[data-ttnc-modal-toggle]`)];
   if (!btnToggle || !btnToggle.length) return;
@@ -121,6 +122,20 @@ function _toggleModal() {
       b.classList.toggle("hidden");
       a.classList.toggle("flex");
       b.classList.toggle("flex");
+
+      if (a.getAttribute("data-ttnc-modal-toggle-class-in-from")) {
+        const classFrom = a.getAttribute(
+          "data-ttnc-modal-toggle-class-in-from"
+        );
+        const classTo = a.getAttribute("data-ttnc-modal-toggle-class-in-to");
+        if (!a.classList.contains("hidden")) {
+          setTimeout(() => {
+            a.className = a.className.replace(classFrom, classTo);
+          }, 50);
+        } else {
+          a.className = a.className.replace(classTo, classFrom);
+        }
+      }
     });
   });
 }
@@ -135,13 +150,27 @@ function _handleToggleDropdown() {
     if (!panel) return;
     element.addEventListener("click", (event) => {
       event.preventDefault();
-      const placement = panel.getAttribute("data-popper-placement");
 
-      var popper = new Popper(element, panel, {
-        placement: placement || "bottom-start",
-      });
+      // Hidden all dropdown open
+      if (!panelClass.contains("hidden")) {
+        dropdowns.map((dropd) => {
+          if (!dropd.classList.contains("hidden")) {
+            !dropd.classList.add("hidden");
+          }
+        });
+      } else {
+        dropdowns.map((dropd) => {
+          if (!dropd.classList.contains("hidden")) {
+            !dropd.classList.add("hidden");
+          }
+        });
+        const placement = panel.getAttribute("data-popper-placement");
+        var popper = new Popper(element, panel, {
+          placement: placement || "bottom-start",
+        });
+        panelClass.toggle("hidden");
+      }
 
-      panelClass.toggle("hidden");
       panelClass.toggle("block");
     });
   });

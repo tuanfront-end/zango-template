@@ -63,46 +63,44 @@ const NavMobile: React.FC<NavMobileProps> = ({ modalId, data }) => {
   };
 
   return (
-    <div className="absolute left-0 bottom-0 top-0 w-full md:w-80 p-2 transition transform origin-top-right ">
-      <div className="shadow-lg ring-1 ring-black ring-opacity-20 bg-white dark:bg-gray-800 divide-y-2 divide-gray-100 dark:divide-gray-700">
-        <div className="py-6 px-5">
-          <Logo />
-          <div className="flex flex-col mt-5 text-gray-700 dark:text-gray-300 text-sm">
-            <span>Contact us: ++8801682530219</span>
-            <span>Mail us: eoard@gmail.com</span>
-            <div className="flex space-x-3 text-gray-900 dark:text-gray-100 text-xl mt-4">
-              <a href="#root">
-                <i className="lab la-facebook-f"></i>
-              </a>
-              <a href="#root">
-                <i className="lab la-twitter"></i>
-              </a>
-              <a href="#root">
-                <i className="lab la-pinterest-p"></i>
-              </a>
-              <a href="#root">
-                <i className="lab la-github"></i>
-              </a>
-            </div>
+    <div className="overflow-y-auto w-full md:w-80 p-2 transition transform shadow-lg ring-1 ring-black ring-opacity-20 bg-white dark:bg-gray-800 divide-y-2 divide-gray-100 dark:divide-gray-700">
+      <div className="py-6 px-5">
+        <Logo />
+        <div className="flex flex-col mt-5 text-gray-700 dark:text-gray-300 text-sm">
+          <span>Contact us: ++8801682530219</span>
+          <span>Mail us: eoard@gmail.com</span>
+          <div className="flex space-x-3 text-gray-900 dark:text-gray-100 text-xl mt-4">
+            <a href="#root">
+              <i className="lab la-facebook-f"></i>
+            </a>
+            <a href="#root">
+              <i className="lab la-twitter"></i>
+            </a>
+            <a href="#root">
+              <i className="lab la-pinterest-p"></i>
+            </a>
+            <a href="#root">
+              <i className="lab la-github"></i>
+            </a>
           </div>
-          <span className="absolute right-4 top-4">
-            <ButtonClose
-              containerClassName="text-black dark:text-white"
-              modalToggleId={modalId}
-            />
-          </span>
         </div>
-        <nav className="flex flex-col items-start py-6 px-5 space-y-2">
-          {data.map(_renderItem)}
-        </nav>
-        <div className="flex items-center justify-between py-6 px-5 space-x-4">
-          <Button containerClassName="text-white bg-gray-700 uppercase">
-            Get Template
-          </Button>
-          <span className="block md:hidden">
-            <SwithNightMode />
-          </span>
-        </div>
+        <span className="absolute right-4 top-4">
+          <ButtonClose
+            containerClassName="text-black dark:text-white"
+            modalToggleId={modalId}
+          />
+        </span>
+      </div>
+      <nav className="flex flex-col items-start py-6 px-5 space-y-2">
+        {data.map(_renderItem)}
+      </nav>
+      <div className="flex items-center justify-between py-6 px-5 space-x-4">
+        <Button containerClassName="text-white bg-gray-700 uppercase">
+          Get Template
+        </Button>
+        <span className="block md:hidden">
+          <SwithNightMode />
+        </span>
       </div>
     </div>
   );

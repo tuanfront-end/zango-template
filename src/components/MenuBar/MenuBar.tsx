@@ -24,8 +24,10 @@ const MenuBar: React.FC<MenuBarProps> = ({
       </button>
 
       <div
-        className="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+        className="hidden fixed left-0 top-0 bottom-0 z-max outline-none focus:outline-none transition ease-out duration-200 transform -translate-x-full"
         id={navMobileId}
+        data-ttnc-modal-toggle-class-in-from="-translate-x-full"
+        data-ttnc-modal-toggle-class-in-to="opacity-100 translate-x-0"
       >
         <NavMobile data={NAV_DATABASE} modalId={navMobileId} />
       </div>
