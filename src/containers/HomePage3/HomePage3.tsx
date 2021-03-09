@@ -16,13 +16,14 @@ import p11 from "images/p11.png";
 import p13 from "images/p13.png";
 import p15 from "images/p15.png";
 import p16 from "images/p16.png";
-import SectionHero2 from "components/SectionHero2/SectionHero2";
-import Header2 from "components/Header2/Header2";
+import SectionHero3 from "components/SectionHero3/SectionHero3";
+import Header3 from "components/Header3/Header3";
 import Card3 from "components/Card3/Card3";
 import SectionFeatures from "components/SectionFeatures/SectionFeatures";
 import SectionProducts from "components/SectionProducts/SectionProducts";
+import SectionTopProduct from "./SectionTopProduct";
 
-export default function HomePage2() {
+export default function HomePage3() {
   const cards: Card2Props[] = [
     {
       id: "tren1_card2_1",
@@ -89,54 +90,11 @@ export default function HomePage2() {
   return (
     <div className="pb-14 bg-white dark:bg-gray-800">
       {/*  */}
-      <Header2 />
+      <Header3 />
       {/*  */}
-      <SectionHero2 />
-      <section className="py-8 md:py-14 bg-white dark:bg-gray-800">
-        <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Card1
-              containerClassName="aspect-w-4 aspect-h-3"
-              name={
-                <span>
-                  New <br /> Arrival
-                </span>
-              }
-              img={home2P1}
-            />
-            <div className="grid grid-cols-1 gap-4">
-              <Card1
-                containerClassName="aspect-w-4 aspect-h-3"
-                name={
-                  <span>
-                    Running <br /> shoes
-                  </span>
-                }
-                img={home2P2}
-              />
-              <Card1
-                containerClassName="aspect-w-4 aspect-h-3"
-                img={home2P3}
-                name={
-                  <span>
-                    Spring <br /> Collection
-                  </span>
-                }
-              />
-            </div>
-            <Card1
-              containerClassName="aspect-w-4 aspect-h-3 "
-              name={
-                <span>
-                  Wool <br /> sweater
-                </span>
-              }
-              img={home2P4}
-              textColor="text-white"
-            />
-          </div>
-        </div>
-      </section>
+      <SectionHero3 />
+      <SectionFeatures />
+      <SectionTopProduct />
       <SectionProducts cards={cards} />
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 py-14">
@@ -151,8 +109,6 @@ export default function HomePage2() {
           />
         </div>
       </div>
-      {/* <SectionDeal /> */}
-      <SectionFeatures />
     </div>
   );
 }

@@ -105,7 +105,7 @@ function Navigation() {
         <NavLink
           exact
           strict
-          className="inline-flex items-center p-2 xl:px-3 text-white uppercase font-medium text-xs xl:text-sm opacity-95 hover:opacity-100"
+          className="inline-flex items-center p-2 xl:px-3 uppercase font-medium text-xs xl:text-sm opacity-95 hover:opacity-100"
           to={item.link}
           activeClassName="font-semibold opacity-100"
         >

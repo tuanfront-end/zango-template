@@ -260,20 +260,19 @@ function _newGlideCarousel() {
     });
     glide.mount();
   };
-  setTimeout(() => {
-    const sliders = [...document.querySelectorAll(".glide")];
-    const sliderFades = [...document.querySelectorAll(".glide-fade")];
-    const sliderPeeks = [...document.querySelectorAll(".glide-peek")];
-    if (sliders) {
-      sliders.forEach(_intantSlide);
-    }
-    if (sliderFades) {
-      sliderFades.forEach(_intantSlideFade);
-    }
-    if (sliderPeeks) {
-      sliderPeeks.forEach(_intantSlidePeek);
-    }
-  }, 10);
+
+  const sliders = [...document.querySelectorAll(".glide")];
+  const sliderFades = [...document.querySelectorAll(".glide-fade")];
+  const sliderPeeks = [...document.querySelectorAll(".glide-peek")];
+  if (sliders) {
+    sliders.forEach(_intantSlide);
+  }
+  if (sliderFades) {
+    sliderFades.forEach(_intantSlideFade);
+  }
+  if (sliderPeeks) {
+    sliderPeeks.forEach(_intantSlidePeek);
+  }
 }
 
 function _setBgColorForAvatar() {

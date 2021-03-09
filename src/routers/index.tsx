@@ -2,14 +2,15 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from "containers/HomePage/HomePage";
 import { Page } from "./types";
-import Header from "components/Header/Header";
 import Footer from "components/Footer/Footer";
 import SwithNightMode from "components/SwithNightMode/SwithNightMode";
 import HomePage2 from "containers/HomePage2/HomePage2";
+import HomePage3 from "containers/HomePage3/HomePage3";
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: HomePage },
   { path: "/home2", exact: true, component: HomePage2 },
+  { path: "/home3", exact: true, component: HomePage3 },
 ];
 
 const Routes = () => {
