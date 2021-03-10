@@ -1,0 +1,32 @@
+.glide-fade {
+  .glide__slides {
+    transform: none !important;
+    width: auto !important;
+    display: block;
+  }
+  .glide__slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    // transition: opacity 1000ms;
+  }
+  .glide__slide:first-child {
+    position: relative;
+  }
+  .glide__slide--active {
+    z-index: 1;
+    opacity: 1;
+    .ttnc-glide-active-reset {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}
+//
+
+.glide__bullet--active {
+  span.block.border-b.border-gray-800 {
+    @apply w-11 transition-all;
+  }
+}

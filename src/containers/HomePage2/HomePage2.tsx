@@ -2,6 +2,7 @@ import Card1 from "components/Card1/Card1";
 import { Card2Props } from "components/Card2/Card2";
 import React from "react";
 import card3_p3 from "images/card3_p3.png";
+import card3_p1 from "images/card3_p1.png";
 import home2P1 from "images/home2_p1.png";
 import home2P2 from "images/home2_p2.png";
 import home2P3 from "images/home2_p3.png";
@@ -18,9 +19,9 @@ import p15 from "images/p15.png";
 import p16 from "images/p16.png";
 import SectionHero2 from "components/SectionHero2/SectionHero2";
 import Header2 from "components/Header2/Header2";
-import Card3 from "components/Card3/Card3";
 import SectionFeatures from "components/SectionFeatures/SectionFeatures";
 import SectionProducts from "components/SectionProducts/SectionProducts";
+import SectionPromo from "components/SectionPromo/SectionPromo";
 
 export default function HomePage2() {
   const cards: Card2Props[] = [
@@ -138,20 +139,7 @@ export default function HomePage2() {
         </div>
       </section>
       <SectionProducts cards={cards} />
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 py-14">
-          <Card3 />
-          <Card3
-            img={card3_p3}
-            name={
-              <span>
-                Men’s <br /> collection
-              </span>
-            }
-          />
-        </div>
-      </div>
-      {/* <SectionDeal /> */}
+      <SectionPromo img2={card3_p3} img1={card3_p1} />
       <SectionFeatures />
     </div>
   );

@@ -9,7 +9,7 @@ const SectionHero2 = () => {
   const _renderItem = (index = 0) => {
     return (
       <div
-        className="relative flex flex-col justify-center bg-accents-900"
+        className="relative flex flex-col justify-center bg-gray-200"
         style={{ minHeight: "90vh" }}
       >
         <img
@@ -19,14 +19,14 @@ const SectionHero2 = () => {
         />
         <div className="container relative pt-12 lg:pt-20 pb-32">
           <div className="w-full lg:w-2/4 xl:pr-10 text-black uppercase text-left md:text-right space-y-8 sm:space-y-10">
-            <span className="text-sm xl:text-lg 2xl:text-1.5xl inline-block font-LibreFranklin tracking-sub-title-540 font-light border-b border-gray-800">
+            <span className="text-sm xl:text-lg 2xl:text-1.5xl inline-block font-LibreFranklin tracking-sub-title-540 font-light border-b border-gray-800 transform transition duration-1000 -translate-x-20 opacity-0 ttnc-glide-active-reset">
               {!index
                 ? "50% sell off"
                 : index === 1
                 ? "10% sell off"
                 : "25% sell off"}
             </span>
-            <h1 className="text-4xl lg:text-5xl xl:text-7xl 2xl:text-90px font-medium">
+            <h1 className="text-4xl lg:text-5xl xl:text-7xl 2xl:text-90px font-medium transform transition duration-1000 -translate-x-20 opacity-0 delay-100 ttnc-glide-active-reset">
               {!index ? (
                 <React.Fragment>
                   Fashion <span className="font-thin">Collection</span>
@@ -42,17 +42,19 @@ const SectionHero2 = () => {
                 </React.Fragment>
               )}
             </h1>
-            <span className="text-lg normal-case hidden sm:inline-block">
+            <span className="text-lg normal-case hidden sm:inline-block transform transition duration-1000 -translate-x-20 opacity-0 delay-200 ttnc-glide-active-reset">
               Collection of textile samples lay spread out on the table damsa
               was a travelling salesman and above it there hung a picture that
               he had recently
             </span>
-            <Button
-              containerClassName="border border-black bg-black text-white"
-              url="#root"
-            >
-              Shop now
-            </Button>
+            <div className="transform transition duration-1000 -translate-x-20 opacity-0 delay-300 ttnc-glide-active-reset">
+              <Button
+                containerClassName="border border-black bg-black text-white "
+                url="#root"
+              >
+                Shop now
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -69,7 +71,7 @@ const SectionHero2 = () => {
             <li className="glide__slide">{_renderItem(2)}</li>
           </ul>
         </div>
-        <div className="absolute bottom-12 2xl:bottom-20 left-0 w-full px-4 md:px-10">
+        <div className="absolute bottom-12 2xl:bottom-20 left-0 w-full px-4 md:px-10 ">
           <div className="flex items-center justify-start sm:justify-between text-gray-900">
             <div className="flex-shrink-0 hidden sm:flex items-center">
               <div className="flex space-x-3 text-xl">

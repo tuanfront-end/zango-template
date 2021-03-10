@@ -1,11 +1,7 @@
-import Card1 from "components/Card1/Card1";
 import { Card2Props } from "components/Card2/Card2";
 import React from "react";
-import card3_p3 from "images/card3_p3.png";
-import home2P1 from "images/home2_p1.png";
-import home2P2 from "images/home2_p2.png";
-import home2P3 from "images/home2_p3.png";
-import home2P4 from "images/home2_p4.png";
+import promo_3 from "images/promo_3.png";
+import promo_4 from "images/promo_4.png";
 import p5 from "images/p5.png";
 import p6 from "images/p6.png";
 import p7 from "images/p7.png";
@@ -18,10 +14,10 @@ import p15 from "images/p15.png";
 import p16 from "images/p16.png";
 import SectionHero3 from "components/SectionHero3/SectionHero3";
 import Header3 from "components/Header3/Header3";
-import Card3 from "components/Card3/Card3";
 import SectionFeatures from "components/SectionFeatures/SectionFeatures";
 import SectionProducts from "components/SectionProducts/SectionProducts";
 import SectionTopProduct from "./SectionTopProduct";
+import SectionPromo from "components/SectionPromo/SectionPromo";
 
 export default function HomePage3() {
   const cards: Card2Props[] = [
@@ -96,19 +92,7 @@ export default function HomePage3() {
       <SectionFeatures />
       <SectionTopProduct />
       <SectionProducts cards={cards} />
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 py-14">
-          <Card3 />
-          <Card3
-            img={card3_p3}
-            name={
-              <span>
-                Men’s <br /> collection
-              </span>
-            }
-          />
-        </div>
-      </div>
+      <SectionPromo img1={promo_3} img2={promo_4} />
     </div>
   );
 }

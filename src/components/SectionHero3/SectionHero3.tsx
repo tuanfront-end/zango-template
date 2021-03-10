@@ -5,15 +5,15 @@ const SectionHero3 = () => {
   const _renderItem = (index = 0) => {
     return (
       <div className="hero3-item-container  relative flex flex-col justify-center">
-        <div className="absolute inset-0 w-full h-full flex items-center justify-center p-6 md:p-10 z-10">
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center p-6 md:p-10 z-10 transform transition duration-1000 translate-y-16 opacity-0 ttnc-glide-active-reset">
           <img
             className="mx-auto sm:w-4/5 md:w-2/3 xl:w-1/2 sm:h-auto max-h-full"
             src={img1}
             alt="Stylish shop"
           />
         </div>
-        <div className="absolute inset-0 w-full h-full flex items-center justify-center text-center">
-          <h1 className="hero3-title text-white uppercase  font-medium">
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center text-center transform transition duration-1000 -translate-y-16 opacity-60 ttnc-glide-active-reset">
+          <h1 className="hero3-title text-white uppercase font-medium">
             snacker
           </h1>
         </div>

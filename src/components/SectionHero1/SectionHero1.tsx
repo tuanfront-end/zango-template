@@ -13,20 +13,20 @@ const SectionHero1 = () => {
         style={{ minHeight: "90vh" }}
       >
         <img
-          className="block absolute inset-0  w-full h-full object-cover"
+          className="block absolute inset-0  w-full h-full object-cover transform transition duration-1000 opacity-70 ttnc-glide-active-reset"
           src={!index ? hero1 : index === 1 ? hero2 : hero3}
           alt="Stylish shop"
         />
         <div className="container relative pt-12 lg:pt-20 pb-32">
           <div className="w-full lg:w-2/4 xl:pr-10 text-white uppercase">
-            <span className="text-sm xl:text-lg 2xl:text-1.5xl block font-LibreFranklin tracking-sub-title-540 font-light mb-4 lg:mb-8">
+            <span className="text-sm xl:text-lg 2xl:text-1.5xl block font-LibreFranklin tracking-sub-title-540 font-light mb-4 lg:mb-9 transform transition duration-1000 translate-y-20 opacity-0 ttnc-glide-active-reset">
               {!index
                 ? "Stylish shop"
                 : index === 1
                 ? "Trendy Shop"
                 : "Winter Shop"}
             </span>
-            <h1 className="text-4xl lg:text-5xl xl:text-7xl 2xl:text-90px font-medium mb-6 sm:mb-8 lg:mb-11">
+            <h1 className="text-4xl lg:text-5xl xl:text-7xl 2xl:text-90px font-medium mb-6 sm:mb-8 lg:mb-14 transform transition duration-1000 translate-y-20 opacity-0 ttnc-glide-active-reset delay-100 ">
               {!index ? (
                 <React.Fragment>
                   <span className="font-thin">Winter</span> Collection
@@ -42,12 +42,14 @@ const SectionHero1 = () => {
                 </React.Fragment>
               )}
             </h1>
-            <Button
-              containerClassName="border border-white hover:border-black bg-transparent hover:bg-black"
-              url="#root"
-            >
-              Shop now
-            </Button>
+            <div className="ml-1 transform transition duration-1000 translate-y-20 opacity-0 ttnc-glide-active-reset delay-200">
+              <Button
+                containerClassName="border border-white hover:border-black bg-transparent hover:bg-black "
+                url="#root"
+              >
+                Shop now
+              </Button>
+            </div>
           </div>
         </div>
       </div>

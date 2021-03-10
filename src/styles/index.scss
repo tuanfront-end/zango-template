@@ -1,6 +1,7 @@
 @import "./typographys.scss";
 @import "./lineClamp";
 @import "./toolTip";
+@import "./glidejs";
 //
 .tnnc-grid-col-section-hero {
   grid-template-columns: 5fr 0.5fr 5fr;
@@ -19,28 +20,6 @@
 .ttnc-stop-scrolling {
   height: 100vh !important;
   overflow: hidden !important;
-}
-
-.glide-fade {
-  .glide__slides {
-    transform: none !important;
-    width: auto !important;
-    display: block;
-  }
-  .glide__slide {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    transition: opacity 1s;
-  }
-  .glide__slide:first-child {
-    position: relative;
-  }
-  .glide__slide--active {
-    z-index: 1;
-    opacity: 1;
-  }
 }
 
 // ==== hero3
