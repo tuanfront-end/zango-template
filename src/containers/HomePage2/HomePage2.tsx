@@ -7,86 +7,15 @@ import home2P1 from "images/home2_p1.png";
 import home2P2 from "images/home2_p2.png";
 import home2P3 from "images/home2_p3.png";
 import home2P4 from "images/home2_p4.png";
-import p5 from "images/p5.png";
-import p6 from "images/p6.png";
-import p7 from "images/p7.png";
-import p8 from "images/p8.png";
-import p9 from "images/p9.png";
-import p10 from "images/p10.png";
-import p11 from "images/p11.png";
-import p13 from "images/p13.png";
-import p15 from "images/p15.png";
-import p16 from "images/p16.png";
+
 import SectionHero2 from "components/SectionHero2/SectionHero2";
 import Header2 from "components/Header2/Header2";
 import SectionFeatures from "components/SectionFeatures/SectionFeatures";
 import SectionProducts from "components/SectionProducts/SectionProducts";
 import SectionPromo from "components/SectionPromo/SectionPromo";
+import { CARD_DATA } from "containers/HomePage/HomePage";
 
 export default function HomePage2() {
-  const cards: Card2Props[] = [
-    {
-      id: "tren1_card2_1",
-      price: "$144",
-      oldPrice: "$244",
-      saleUp: "12%",
-      name: "Women Wool Runner",
-      img: p5,
-      img2: p15,
-    },
-    {
-      id: "tren1_card2_2",
-      price: "$244",
-      name: "Two Colure Hoodie",
-      img: p7,
-      img2: p6,
-    },
-    {
-      id: "tren1_card2_3",
-      price: "$164",
-      name: "Beautifull Stylish Handbag",
-      img: p16,
-    },
-    {
-      id: "tren1_card2_4",
-      price: "$224",
-      oldPrice: "$333",
-      saleUp: "11%",
-      name: "Shadedeye Gold Sunglasses",
-      img: p8,
-      img2: p9,
-    },
-
-    {
-      id: "tren1_card2_5",
-      price: "$322",
-      name: "Stylish Smart Watch",
-      img: p13,
-    },
-    {
-      id: "tren1_card2_6",
-      price: "$844",
-      oldPrice: "$944",
-      saleUp: "10%",
-      name: "Gray Fitness T-Shirt",
-      img: p10,
-      img2: p11,
-    },
-    {
-      id: "tren1_card2_7",
-      price: "$244",
-      name: "Two Colure Hoodie",
-      img: p7,
-      img2: p6,
-    },
-    {
-      id: "tren1_card2_8",
-      price: "$164",
-      name: "Beautifull Stylish Handbag",
-      img: p16,
-    },
-  ];
-
   return (
     <div className="pb-14 bg-white dark:bg-gray-800">
       {/*  */}
@@ -138,7 +67,7 @@ export default function HomePage2() {
           </div>
         </div>
       </section>
-      <SectionProducts cards={cards} />
+      <SectionProducts cards={CARD_DATA} />
       <SectionPromo img2={card3_p3} img1={card3_p1} />
       <SectionFeatures />
     </div>

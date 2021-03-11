@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import card3_p1 from "images/card3_p1.png";
-import Button from "components/Button/Button";
+import ButtonSecondary from "components/ButtonSecondary/ButtonSecondary";
 
 export interface Card3Props {
   img?: string;
@@ -25,9 +25,8 @@ const Card3: React.FC<Card3Props> = ({ img, name }) => {
                 </span>
               )}
             </h3>
-            <Button containerClassName="border border-white bg-transparent uppercase">
-              Shop now
-            </Button>
+
+            <ButtonSecondary>Shop now</ButtonSecondary>
           </div>
         </div>
       </div>

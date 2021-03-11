@@ -4,6 +4,7 @@ import hero2 from "images/hero2_2.png";
 import hero3 from "images/hero2_3.png";
 import Button from "components/Button/Button";
 import NextPrev from "components/NextPrev/NextPrev";
+import ButtonPrimary from "components/ButtonPrimary/ButtonPrimary";
 
 const SectionHero2 = () => {
   const _renderItem = (index = 0) => {
@@ -26,7 +27,10 @@ const SectionHero2 = () => {
                 ? "10% sell off"
                 : "25% sell off"}
             </span>
-            <h1 className="text-4xl lg:text-5xl xl:text-7xl 2xl:text-90px font-medium transform transition duration-1000 -translate-x-20 opacity-0 delay-100 ttnc-glide-active-reset">
+            <h1
+              className="text-4xl lg:text-5xl xl:text-7xl 2xl:text-90px font-medium transform transition duration-1000 -translate-x-20 opacity-0 delay-100 ttnc-glide-active-reset"
+              style={{ lineHeight: 1.15 }}
+            >
               {!index ? (
                 <React.Fragment>
                   Fashion <span className="font-thin">Collection</span>
@@ -48,12 +52,7 @@ const SectionHero2 = () => {
               he had recently
             </span>
             <div className="transform transition duration-1000 -translate-x-20 opacity-0 delay-300 ttnc-glide-active-reset">
-              <Button
-                containerClassName="border border-black bg-black text-white "
-                url="#root"
-              >
-                Shop now
-              </Button>
+              <ButtonPrimary>Shop now</ButtonPrimary>
             </div>
           </div>
         </div>

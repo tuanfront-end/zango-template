@@ -3,6 +3,8 @@ import hero3_topProduct from "images/home3_topProduct.jpg";
 import Hero3_1 from "images/Hero3_1.png";
 import p2 from "images/p2.png";
 import Button from "components/Button/Button";
+import ButtonPrimary from "components/ButtonPrimary/ButtonPrimary";
+import ButtonSecondary from "components/ButtonSecondary/ButtonSecondary";
 export interface ItemType {
   title: string;
   price: string;
@@ -59,8 +61,8 @@ const SectionTopProduct = () => {
             </div>
             <div className="flex space-x-2 lg:mb-14 mb-10 transition transform duration-1000 translate-y-8 opacity-0 delay-150 ttnc-glide-active-reset">
               <Button
-                containerClassName="bg-transparent text-gray-900 border border-gray-900"
-                padding="p-4"
+                containerClassName="bg-transparent text-gray-900 border border-gray-900 dark:border-gray-100 dark:text-gray-100 "
+                padding="px-3 py2"
                 fontSize="text-xl xl:text-2xl"
               >
                 <svg
@@ -79,8 +81,8 @@ const SectionTopProduct = () => {
                 </svg>
               </Button>
               <Button
-                containerClassName="bg-transparent text-gray-900 border border-gray-900 "
-                padding="p-4"
+                containerClassName="bg-transparent text-gray-900 border border-gray-900 dark:border-gray-100 dark:text-gray-100 "
+                padding="px-3 py2"
                 fontSize="text-xl xl:text-2xl"
               >
                 <svg
@@ -104,9 +106,8 @@ const SectionTopProduct = () => {
                   />
                 </svg>
               </Button>
-              <Button containerClassName="bg-black text-white uppercase">
-                add to cart
-              </Button>
+
+              <ButtonPrimary>add to cart</ButtonPrimary>
             </div>
 
             <div
@@ -115,24 +116,24 @@ const SectionTopProduct = () => {
             >
               <span
                 data-glide-dir="=0"
-                className="flex items-center text-lg text-gray-800 space-x-4"
+                className="flex items-center text-lg text-gray-800 dark:text-gray-200 space-x-4"
               >
                 <span>01</span>
-                <span className="block border-b border-gray-800 w-0"></span>
+                <span className="w-11 border-b border-gray-800 dark:border-gray-200 hidden"></span>
               </span>
               <span
                 data-glide-dir="=1"
-                className="flex items-center text-lg text-gray-800 space-x-4"
+                className="flex items-center text-lg text-gray-800 dark:text-gray-200 space-x-4"
               >
                 <span>02</span>
-                <span className="block border-b border-gray-800 w-0"></span>
+                <span className="w-11 border-b border-gray-800 dark:border-gray-200 hidden"></span>
               </span>
               <span
                 data-glide-dir="=2"
-                className="flex items-center text-lg text-gray-800 space-x-4"
+                className="flex items-center text-lg text-gray-800 dark:text-gray-200 space-x-4"
               >
                 <span>03</span>
-                <span className="block border-b border-gray-800 w-0"></span>
+                <span className="w-11 border-b border-gray-800 dark:border-gray-200 hidden"></span>
               </span>
             </div>
           </div>
@@ -142,7 +143,7 @@ const SectionTopProduct = () => {
   };
 
   return (
-    <div className="ttnc-SectionLogoClounds py-8 md:py-14 bg-white dark:bg-gray-800">
+    <div className="ttnc-SectionTopProduct py-8 md:py-14 bg-white dark:bg-gray-800">
       <div className="container">
         <div className="glide-fade">
           <div className="glide__track" data-glide-el="track">

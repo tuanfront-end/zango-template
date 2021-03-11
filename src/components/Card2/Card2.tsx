@@ -59,10 +59,10 @@ const Card2: React.FC<Card2Props> = ({
             )}
           </a>
         </div>
-        <div className="px-2 py-4 sm:px-6 sm:py-6 text-center text-gray-900 dark:text-white font-medium">
+        <div className="px-2 py-4 sm:px-6 sm:py-6 text-center text-gray-900 dark:text-white text-lg font-medium">
           <a
             href="#root"
-            className="transition-all block text-lg mb-3 group-hover:text-secondary"
+            className="transition-all block mb-2.5 group-hover:text-secondary font-normal"
           >
             {name || `Running shoes`}
           </a>

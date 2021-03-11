@@ -25,8 +25,9 @@
 }
 //
 
-.glide__bullet--active {
-  span.block.border-b.border-gray-800 {
-    @apply w-11 transition-all;
+.ttnc-HomePage3 .ttnc-SectionTopProduct .glide__bullet--active {
+  background: none;
+  span.w-11.border-b.border-gray-800 {
+    display: block;
   }
 }

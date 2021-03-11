@@ -84,7 +84,7 @@ export default function HomePage3() {
   ];
 
   return (
-    <div className="pb-14 bg-white dark:bg-gray-800">
+    <div className="ttnc-HomePage3 pb-14 bg-white dark:bg-gray-800">
       {/*  */}
       <Header3 />
       {/*  */}

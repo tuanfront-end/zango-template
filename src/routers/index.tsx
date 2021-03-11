@@ -6,11 +6,13 @@ import Footer from "components/Footer/Footer";
 import SwithNightMode from "components/SwithNightMode/SwithNightMode";
 import HomePage2 from "containers/HomePage2/HomePage2";
 import HomePage3 from "containers/HomePage3/HomePage3";
+import ShopPage from "containers/ShopPage/ShopPage";
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: HomePage },
   { path: "/home2", exact: true, component: HomePage2 },
   { path: "/home3", exact: true, component: HomePage3 },
+  { path: "/shop", exact: true, component: ShopPage },
 ];
 
 const Routes = () => {

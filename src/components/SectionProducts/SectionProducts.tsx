@@ -1,4 +1,4 @@
-import Button from "components/Button/Button";
+import ButtonPrimary from "components/ButtonPrimary/ButtonPrimary";
 import Card2, { Card2Props } from "components/Card2/Card2";
 import React from "react";
 
@@ -26,9 +26,7 @@ const SectionProducts: React.FC<SectionProductsProps> = ({ cards }) => {
           })}
         </div>
         <div className="flex items-center justify-center">
-          <Button containerClassName="bg-black text-white uppercase">
-            more product
-          </Button>
+          <ButtonPrimary>more product</ButtonPrimary>
         </div>
       </div>
     </div>
