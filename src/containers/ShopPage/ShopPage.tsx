@@ -11,7 +11,7 @@ export default function ShopPage() {
       <SectionBanner pageName="Shop" />
       <div className="py-16 xl:py-24 px-4 xl:px-24">
         <div className="flex">
-          <div className="w-72 pr-20">
+          <div className="flex-shrink-0 w-72 mr-20">
             <SectionSidebarFilter />
           </div>
           <SectionProductsPageShop />

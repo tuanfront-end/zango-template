@@ -7,6 +7,7 @@ window.addEventListener("load", function () {
   _newGlideCarousel();
   _setBgColorForAvatar();
   _countDownDateTime();
+  _myNoUiSlider();
   //
 });
 
@@ -343,4 +344,17 @@ function _countDownDateTime() {
       clearInterval(x);
     }
   }, 1000);
+}
+
+function _myNoUiSlider() {
+  const slider = document.getElementById("priceSliderRange");
+
+  noUiSlider.create(slider, {
+    start: [20, 80],
+    connect: true,
+    range: {
+      min: 0,
+      max: 100,
+    },
+  });
 }
