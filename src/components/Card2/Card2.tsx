@@ -33,7 +33,7 @@ const Card2: React.FC<Card2Props> = ({
       <div className="group relative">
         {saleUp && (
           <div className="absolute right-0 top-8 z-20">
-            <span className="py-2 px-4 bg-secondary text-white text-sm">
+            <span className="py-2 px-4 bg-secondary text-gray-200 text-sm">
               {saleUp}
             </span>
           </div>
@@ -59,7 +59,7 @@ const Card2: React.FC<Card2Props> = ({
             )}
           </a>
         </div>
-        <div className="px-2 py-4 sm:px-6 sm:py-6 text-center text-gray-900 dark:text-white text-lg font-medium">
+        <div className="px-2 py-4 sm:px-6 sm:py-6 text-center text-gray-900 dark:text-gray-200 text-lg font-medium">
           <a
             href="#root"
             className="transition-all block mb-2.5 group-hover:text-secondary font-normal"

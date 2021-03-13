@@ -64,23 +64,36 @@ const SectionProductsPageShop = () => {
   };
   return (
     <div className="ttnc-SectionProductsPageShop">
-      <header className="flex justify-between items-center mb-12 text-gray-500 text-sm font-LibreFranklin">
+      <header className="flex justify-between items-center mb-12 text-gray-500 dark:text-gray-300 text-sm font-LibreFranklin">
         <span>
           Showing
-          <span className="font-medium text-gray-700 mx-1">1-12</span>
+          <span className="font-medium text-gray-700 dark:text-gray-100 mx-1">
+            1-12
+          </span>
           of
-          <span className="font-medium text-gray-700 mx-1">158</span>
+          <span className="font-medium text-gray-700 dark:text-gray-100 mx-1">
+            158
+          </span>
           products
         </span>
         <div className="flex space-x-2">
           <span>Show</span>
-          <a className="hover:underline text-gray-700" href="#root">
+          <a
+            className="hover:underline text-gray-700 dark:text-gray-100"
+            href="#root"
+          >
             12
           </a>
-          <a className="hover:underline text-gray-700" href="#root">
+          <a
+            className="hover:underline text-gray-700 dark:text-gray-100"
+            href="#root"
+          >
             24
           </a>
-          <a className="underline text-gray-700" href="#root">
+          <a
+            className="underline text-gray-700 dark:text-gray-100"
+            href="#root"
+          >
             All
           </a>
         </div>

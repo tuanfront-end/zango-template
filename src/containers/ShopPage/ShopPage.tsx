@@ -6,7 +6,7 @@ import SectionSidebarFilter from "./SectionSidebarFilter";
 
 export default function ShopPage() {
   return (
-    <div className="ttnc-ShopPage">
+    <div className="ttnc-ShopPage bg-white dark:bg-gray-800">
       <Header />
       <SectionBanner pageName="Shop" />
       <div className="py-16 xl:py-24 px-4 xl:px-24">

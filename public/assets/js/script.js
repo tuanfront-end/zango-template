@@ -350,11 +350,24 @@ function _myNoUiSlider() {
   const slider = document.getElementById("priceSliderRange");
 
   noUiSlider.create(slider, {
-    start: [20, 80],
+    start: [0, 280],
     connect: true,
     range: {
       min: 0,
-      max: 100,
+      max: 400,
     },
+    format: wNumb({
+      decimals: 0,
+    }),
+  });
+
+  const valuesDivs = [
+    document.getElementById("priceSliderRange-value1"),
+    document.getElementById("priceSliderRange-value2"),
+  ];
+
+  // When the slider value changes, update the input and span
+  slider.noUiSlider.on("update", function (values, handle) {
+    valuesDivs[handle].innerHTML = values[handle];
   });
 }
