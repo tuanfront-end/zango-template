@@ -5,8 +5,8 @@ export interface LocationStates {
   "/home2"?: {};
   "/home3"?: {};
   "/shop"?: {};
-  "/producs"?: {};
-  "/produc-detail"?: {};
+  "/shop2"?: {};
+  "/shop-single"?: {};
   "/about-us"?: {};
   "/contact"?: {};
   "/cart"?: {};

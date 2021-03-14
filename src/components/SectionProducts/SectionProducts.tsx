@@ -8,7 +8,7 @@ export interface SectionProductsProps {
 
 const SectionProducts: React.FC<SectionProductsProps> = ({ cards }) => {
   return (
-    <div className="ttnc-SectionProducts py-8 md:py-14 bg-white dark:bg-gray-800">
+    <div className="ttnc-SectionProducts py-8 md:py-14 bg-white  dark:bg-gray-800">
       <div className="container">
         <div className="flex items-center justify-center space-x-12 uppercase text-gray-900 dark:text-gray-100 text-base mb-6 font-medium">
           <a
@@ -20,7 +20,7 @@ const SectionProducts: React.FC<SectionProductsProps> = ({ cards }) => {
           <a href="#root">Best sellers</a>
           <a href="#root">Sale product</a>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 2xl:gap-8 mb-16">
           {cards.map((card) => {
             return <Card2 key={card.id} {...card} />;
           })}

@@ -25,7 +25,7 @@ const Card2: React.FC<Card2Props> = ({
     <React.Fragment>
       <QuickViewProduct
         id={id}
-        img={img}
+        images={[img || p4Img, img2 || p4Img]}
         name={name}
         price={price}
         oldPrice={oldPrice}
@@ -59,7 +59,7 @@ const Card2: React.FC<Card2Props> = ({
             )}
           </a>
         </div>
-        <div className="px-2 py-4 sm:px-6 sm:py-6 text-center text-gray-900 dark:text-gray-200 text-lg font-medium">
+        <div className="px-2 py-4 2xl:px-6 2xl:py-6 text-center text-gray-900 dark:text-gray-200 text-lg font-medium">
           <a
             href="#root"
             className="transition-all block mb-2.5 group-hover:text-secondary font-normal"

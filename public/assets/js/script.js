@@ -234,22 +234,63 @@ function _newGlideCarousel() {
     const gap = Number(element.getAttribute("ttnc-data-glide-gap")) || 0;
     const perView =
       Number(element.getAttribute("ttnc-data-glide-item-per-row")) || 4;
+    const perView1100 =
+      Number(element.getAttribute("ttnc-data-glide-item-per-row-1100")) || 3;
+    const perView800 =
+      Number(element.getAttribute("ttnc-data-glide-item-per-row-800")) || 2;
+
     const glide = new Glide(element, {
       rewind: true,
       gap,
-      perView: 4,
+      perView,
       breakpoints: {
         1100: {
-          perView: 3,
+          perView: perView1100,
           gap: 20,
         },
         800: {
-          perView: 2,
+          perView: perView800,
           gap: 16,
         },
       },
     });
+
     glide.mount();
+  };
+  const _intantSlideForProductImageSlide = (element) => {
+    const gap = Number(element.getAttribute("ttnc-data-glide-gap")) || 0;
+    const perView =
+      Number(element.getAttribute("ttnc-data-glide-item-per-row")) || 4;
+    const perView1100 =
+      Number(element.getAttribute("ttnc-data-glide-item-per-row-1100")) || 3;
+    const perView800 =
+      Number(element.getAttribute("ttnc-data-glide-item-per-row-800")) || 2;
+
+    const glide = new Glide(element, {
+      rewind: true,
+      gap,
+      perView,
+      breakpoints: {
+        1100: {
+          perView: perView1100,
+          gap: 20,
+        },
+        800: {
+          perView: perView800,
+          gap: 16,
+        },
+      },
+    });
+
+    glide.mount();
+
+    document.querySelectorAll(".ttnc-open-quickViewModalId").forEach((item) => {
+      setTimeout(() => {
+        item.addEventListener("click", function () {
+          glide.update();
+        });
+      }, 10);
+    });
   };
   const _intantSlideFade = (element) => {
     const glide = new Glide(element, {
@@ -262,18 +303,16 @@ function _newGlideCarousel() {
     glide.mount();
   };
 
+  const slidersForProductImg = [
+    ...document.querySelectorAll(".glide-for-product-content"),
+  ];
   const sliders = [...document.querySelectorAll(".glide")];
   const sliderFades = [...document.querySelectorAll(".glide-fade")];
   const sliderPeeks = [...document.querySelectorAll(".glide-peek")];
-  if (sliders) {
-    sliders.forEach(_intantSlide);
-  }
-  if (sliderFades) {
-    sliderFades.forEach(_intantSlideFade);
-  }
-  if (sliderPeeks) {
-    sliderPeeks.forEach(_intantSlidePeek);
-  }
+  slidersForProductImg.forEach(_intantSlideForProductImageSlide);
+  sliders.forEach(_intantSlide);
+  sliderFades.forEach(_intantSlideFade);
+  sliderPeeks.forEach(_intantSlidePeek);
 }
 
 function _setBgColorForAvatar() {
@@ -348,7 +387,7 @@ function _countDownDateTime() {
 
 function _myNoUiSlider() {
   const slider = document.getElementById("priceSliderRange");
-
+  if (!slider) return;
   noUiSlider.create(slider, {
     start: [0, 280],
     connect: true,

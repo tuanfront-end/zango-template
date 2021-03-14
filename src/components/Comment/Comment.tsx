@@ -15,21 +15,21 @@ const Comment: FC<CommentProps> = ({
   return (
     <div>
       <div className=" relative">
-        <div className="flex items-center space-x-4 pr-8 font-medium mb-10px">
+        <div className="flex items-center space-x-4 pr-8 mb-3">
           <Avatar sizeClass={avatarSize} radius={avatarRadius} />
           <div>
             <a
-              className="block text-neutral-900 dark:text-neutral-100 text-body leading-tight"
+              className="block text-gray-900 dark:text-gray-100 leading-tight font-medium"
               href="@@"
             >
               {_getPersonNameRd()}
             </a>
-            <span className="block text-neutral-600 dark:text-neutral-400 text-base leading-tight">
+            <span className="block text-gray-600 dark:text-gray-400 leading-tight">
               2 days ago
             </span>
           </div>
         </div>
-        <div className="mb-10px text-base text-neutral-700 dark:text-neutral-300">
+        <div className="mb-3 text-sm text-gray-700 dark:text-gray-300">
           <span>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente,
             id totam ipsa mollitia maiores repellendus, saepe eius modi deserunt
@@ -37,9 +37,9 @@ const Comment: FC<CommentProps> = ({
             fugiat neque sapiente?
           </span>
         </div>
-        <div className="text-xs font-medium text-neutral-700 dark:text-neutral-300 flex items-center leading-none">
+        <div className="text-sm text-gray-700 dark:text-gray-300 flex items-center leading-none">
           <i className="las la-thumbs-up text-body leading-none"></i>
-          <span className="mr-10px  leading-none">20</span>
+          <span className="mr-3  leading-none">20</span>
           <i className="las la-thumbs-down text-body  leading-none"></i>
           <span className="mr-5 leading-none">1</span>
           <a href="#root">Reply</a>

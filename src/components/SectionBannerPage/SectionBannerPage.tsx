@@ -1,16 +1,16 @@
 import React from "react";
 
-export interface SectionBannerProps {
+export interface SectionBannerPageProps {
   pageName?: string;
 }
-const SectionBanner: React.FC<SectionBannerProps> = ({
+const SectionBannerPage: React.FC<SectionBannerPageProps> = ({
   children,
   pageName = "Shop",
 }) => {
   return (
-    <div className="ttnc-SectionBanner bg-accents-900 py-20 xl:py-28 text-white text-center">
+    <div className="ttnc-SectionBannerPage bg-accents-900 py-20 xl:py-28 text-white text-center">
       <div className="container">
-        <h2 className="text-4xl xl:text-6xl font-medium mb-5 uppercase">
+        <h2 className="text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-5 uppercase">
           {pageName}
         </h2>
         <div className="flex items-center justify-center space-x-4 text-lg">
@@ -23,4 +23,4 @@ const SectionBanner: React.FC<SectionBannerProps> = ({
   );
 };
 
-export default SectionBanner;
+export default SectionBannerPage;

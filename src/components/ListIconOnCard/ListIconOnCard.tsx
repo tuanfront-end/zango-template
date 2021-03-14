@@ -19,7 +19,7 @@ const ListIconOnCard: React.FC<ListIconOnCardProps> = ({
       <ToolTip2>
         <ToolTip2Trigger>
           <div
-            className={`${classes}`}
+            className={`ttnc-open-quickViewModalId ${classes}`}
             data-ttnc-modal-toggle={quickViewModalId}
           >
             <svg

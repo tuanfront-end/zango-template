@@ -52,7 +52,7 @@ const SectionSidebarFilter = () => {
 
   const _renderRatio = (item: string, index: number, name: string) => {
     return (
-      <div className="flex items-center" key={String(index)}>
+      <div className="flex items-center my-2 sm:my-0" key={String(index)}>
         <input
           className="mr-2 text-secondary focus:outline-none focus:ring-1 focus:ring-secondary"
           type="radio"
@@ -79,7 +79,7 @@ const SectionSidebarFilter = () => {
     return (
       <div>
         {_renderWidgetTitlte(title)}
-        <div className="space-y-3">
+        <div className=" flex flex-wrap sm:block space-x-3 sm:space-x-0 sm:space-y-3">
           {data.map((item, index) =>
             _renderRatio(item, index, type === 1 ? "cate" : "size")
           )}

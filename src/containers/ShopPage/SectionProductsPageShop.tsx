@@ -64,7 +64,7 @@ const SectionProductsPageShop = () => {
   };
   return (
     <div className="ttnc-SectionProductsPageShop">
-      <header className="flex justify-between items-center mb-12 text-gray-500 dark:text-gray-300 text-sm font-LibreFranklin">
+      <header className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:justify-between sm:items-center mb-8 sm:mb-12 text-gray-500 dark:text-gray-300 text-sm font-LibreFranklin">
         <span>
           Showing
           <span className="font-medium text-gray-700 dark:text-gray-100 mx-1">
@@ -99,7 +99,7 @@ const SectionProductsPageShop = () => {
         </div>
         <div>
           <Dropdown>
-            <DropdownTrigger>
+            <DropdownTrigger containerClassName="mt-4 sm:mt-0">
               <span>
                 Default Sorting
                 <i className="ml-1 las la-angle-down"></i>
@@ -111,7 +111,7 @@ const SectionProductsPageShop = () => {
           </Dropdown>
         </div>
       </header>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-8 mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 2xl:gap-8 mb-16">
         {[...CARD_DATA, ...CARD2_DATA].map((card) => {
           return <Card2 key={card.id} {...card} />;
         })}
