@@ -1,40 +1,29 @@
 import React from "react";
 export interface InputProps {
   containerClassName?: string;
-  inputClass?: string;
   placeholder?: string;
   label?: string;
-  name: string;
   type?: string;
 }
 const Input: React.FC<InputProps> = ({
-  containerClassName = "",
-  inputClass = "",
-  name,
+  containerClassName = "block",
   placeholder = "",
   label = "",
   type = "text",
 }) => {
   return (
-    <div className={containerClassName}>
+    <label className={containerClassName}>
       {label && (
-        <label
-          htmlFor={name}
-          className="block text-paragraph-small text-black dark:text-white mb-2 ml-4"
-        >
+        <span className="text-gray-700 dark:text-gray-300 text-sm font-LibreFranklin tracking-wide">
           {label}
-        </label>
+        </span>
       )}
-      <div className="flex shadow-sm">
-        <input
-          id={name}
-          type={type}
-          name={name}
-          className={`focus:ring-action-primary focus:border-primary flex-1 block w-full sm:text-sm border-action-primary ${inputClass}`}
-          placeholder={placeholder}
-        />
-      </div>
-    </div>
+      <input
+        type={type}
+        className="mt-2 block w-full border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 font-LibreFranklin 2xl:py-3 placeholder-gray-400 tracking-wide text-sm"
+        placeholder={placeholder}
+      />
+    </label>
   );
 };
 

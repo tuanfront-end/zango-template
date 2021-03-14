@@ -2,34 +2,25 @@ import React, { FC } from "react";
 
 export interface SelectProps {
   containerClassName?: string;
-  name: string;
   label?: string;
 }
 
 const Select: FC<SelectProps> = ({
-  containerClassName = "",
-  name,
+  containerClassName = "block",
   label = "",
   children,
 }) => {
   return (
-    <div className={containerClassName}>
+    <label className={containerClassName}>
       {label && (
-        <label
-          htmlFor={name}
-          className="block text-paragraph-small text-black dark:text-white ml-4 mb-2"
-        >
+        <span className="text-gray-700 dark:text-gray-300 text-sm font-LibreFranklin tracking-wide">
           {label}
-        </label>
+        </span>
       )}
-      <select
-        name={name}
-        autoComplete={name}
-        className="block w-full py-2 px-4 border border-action-primary bg-white shadow-sm focus:outline-none focus:ring-action-primary focus:border-primary focus:ring-2 sm:text-sm"
-      >
+      <select className="mt-2 block w-full border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 font-LibreFranklin text-sm placeholder-gray-400 tracking-wide font-normal">
         {children}
       </select>
-    </div>
+    </label>
   );
 };
 

@@ -4,14 +4,14 @@ import React from "react";
 const SectionDescription = () => {
   const _renderReview = () => {
     return (
-      <div className=" max-w-3xl mx-auto px-4">
+      <div className="py-2 max-w-3xl mx-auto px-4">
         <Comment />
       </div>
     );
   };
   const _renderDesc = () => {
     return (
-      <div className=" max-w-3xl mx-auto text-sm px-4 text-gray-800 dark:text-gray-200">
+      <div className="py-2 max-w-3xl mx-auto text-sm px-4 text-gray-800 dark:text-gray-200">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
         voluptatibus mollitia aspernatur consequatur veniam quasi voluptate
         libero nostrum aliquid eius reprehenderit neque dicta eos natus, sint
@@ -29,17 +29,17 @@ const SectionDescription = () => {
     );
   };
   return (
-    <div className="ttnc-SectionDescription glide-fade bg-white dark:bg-gray-800 mt-24">
+    <div className="ttnc-SectionDescription glide-fade bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 mt-20">
       <div
-        className="border-t border-b border-gray-300 flex items-center justify-center py-6 space-x-10 mb-9"
+        className="border-t border-b border-gray-300 flex items-center justify-center py-6 space-x-10 mb-8"
         data-glide-el="controls[nav]"
       >
-        <button data-glide-dir="=0">
+        <button data-glide-dir="=0" className="bg-none bg-transparent">
           <span className=" uppercase font-medium text-sm p-1">
             description
           </span>
         </button>
-        <button data-glide-dir="=1">
+        <button data-glide-dir="=1" className="bg-none bg-transparent">
           <span className=" uppercase font-medium text-sm p-1">
             Reviews (3)
           </span>

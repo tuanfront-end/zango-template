@@ -8,7 +8,7 @@ const SectionBannerPage: React.FC<SectionBannerPageProps> = ({
   pageName = "Shop",
 }) => {
   return (
-    <div className="ttnc-SectionBannerPage bg-accents-900 py-20 xl:py-28 text-white text-center">
+    <div className="ttnc-SectionBannerPage bg-accents-900 py-16 lg:py-20 2xl:py-32 text-white text-center">
       <div className="container">
         <h2 className="text-4xl xl:text-5xl 2xl:text-6xl font-medium mb-5 uppercase">
           {pageName}

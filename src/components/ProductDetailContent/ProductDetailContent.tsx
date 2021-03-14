@@ -21,19 +21,22 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
       />
     );
   };
+
   const _imageItem = (item: string, index: number) => {
+    const uid = `myimage-${Math.random()}-${Date.now()}-${Math.random()}--${index}`;
+    const uid2 = `myresult-${Math.random()}-${Date.now()}-${Math.random()}--${index}`;
     return (
-      <div className="img-zoom-container relative">
+      <div className={isQuickViewModal ? "" : "img-zoom-container relative"}>
         <img
-          id={"myimage" + index}
-          className={`ttnc-myimage-zoom-lens ${
-            isQuickViewModal ? "mx-auto" : "w-full"
+          id={uid}
+          className={` ${
+            isQuickViewModal ? "mx-auto" : "ttnc-myimage-zoom-lens w-full"
           }`}
-          data-resuilt-id={"myresult" + index}
+          data-resuilt-id={uid2}
           src={item}
           alt="shopSinglePImage"
         />
-        <div id={"myresult" + index} className="img-zoom-result"></div>
+        {!isQuickViewModal && <div id={uid2} className="img-zoom-result"></div>}
       </div>
     );
   };

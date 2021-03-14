@@ -7,6 +7,7 @@ export interface ButtonPrimaryProps {
   fontSize?: string;
   modalToggleId?: string;
   url?: string;
+  textClass?: string;
   size?: string;
 }
 
@@ -14,15 +15,18 @@ const ButtonPrimary: FC<ButtonPrimaryProps> = ({
   containerClassName = "",
   padding = "py-4 px-6 sm:px-8 2xl:px-12",
   fontSize = "text-xs 2xl:text-sm uppercase",
+  textClass = "tracking-widest",
   disabled = false,
   url = "#root",
   children,
   modalToggleId,
 }) => {
   let classes =
-    `ttnc-ButtonPrimary inline-flex items-center justify-center text-center leading-none tracking-widest` +
+    `ttnc-ButtonPrimary inline-flex items-center justify-center text-center leading-none font-medium` +
     " " +
     "border border-black bg-black text-white dark:border-white hover:bg-secondary hover:text-white hover:border-secondary dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary" +
+    " " +
+    textClass +
     " " +
     padding +
     " " +

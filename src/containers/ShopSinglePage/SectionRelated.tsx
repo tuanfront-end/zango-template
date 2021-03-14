@@ -5,7 +5,9 @@ import React from "react";
 const SectionRelated = () => {
   return (
     <div className="ttnc-SectionRelated mt-24">
-      <h2>Related</h2>
+      <h2 className="text-center text-xl md:text-2xl 2xl:text-3xl uppercase mb-8 font-medium">
+        Related products
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 2xl:gap-8 mb-16">
         {CARD2_DATA.map((card) => {
           return <Card2 key={card.id} {...card} />;

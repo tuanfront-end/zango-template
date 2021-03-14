@@ -22,7 +22,7 @@ const ButtonSecondary: FC<ButtonSecondaryProps> = ({
   modalToggleId,
 }) => {
   let classes =
-    `ttnc-ButtonSecondary inline-flex items-center justify-center text-center leading-none tracking-widest` +
+    `ttnc-ButtonSecondary inline-flex items-center justify-center text-center leading-none tracking-widest font-medium` +
     " " +
     "border hover:bg-secondary hover:text-white hover:border-secondary dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary" +
     " " +

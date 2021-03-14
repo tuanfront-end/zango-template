@@ -9,6 +9,8 @@ import HomePage3 from "containers/HomePage3/HomePage3";
 import ShopPage from "containers/ShopPage/ShopPage";
 import ShopPage2 from "containers/ShopPage/ShopPage2";
 import ShopSinglePage from "containers/ShopSinglePage/ShopSinglePage";
+import CartPage from "containers/CartPage/CartPage";
+import CheckoutPage from "containers/CheckoutPage/CheckoutPage";
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: HomePage },
@@ -17,6 +19,8 @@ export const pages: Page[] = [
   { path: "/shop", exact: true, component: ShopPage },
   { path: "/shop2", exact: true, component: ShopPage2 },
   { path: "/shop-single", exact: true, component: ShopSinglePage },
+  { path: "/cart", exact: true, component: CartPage },
+  { path: "/checkout", exact: true, component: CheckoutPage },
 ];
 
 const Routes = () => {
