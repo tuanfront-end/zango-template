@@ -26,7 +26,7 @@ const Card3: React.FC<Card3Props> = ({ img, name }) => {
               )}
             </h3>
 
-            <ButtonSecondary>Shop now</ButtonSecondary>
+            <ButtonSecondary url="/shop">Shop now</ButtonSecondary>
           </div>
         </div>
       </div>

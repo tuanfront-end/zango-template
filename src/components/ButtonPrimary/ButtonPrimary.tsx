@@ -1,4 +1,6 @@
+import MyLink from "components/MyLink/MyLink";
 import React, { FC } from "react";
+import { LocationStates } from "routers/types";
 
 export interface ButtonPrimaryProps {
   containerClassName?: string;
@@ -6,7 +8,7 @@ export interface ButtonPrimaryProps {
   disabled?: boolean;
   fontSize?: string;
   modalToggleId?: string;
-  url?: string;
+  url?: keyof LocationStates | "#root" | "";
   textClass?: string;
   size?: string;
 }
@@ -36,13 +38,13 @@ const ButtonPrimary: FC<ButtonPrimaryProps> = ({
 
   if (!!url) {
     return (
-      <a
-        href={url}
-        className={`${classes}`}
+      <MyLink
         data-ttnc-modal-toggle={modalToggleId}
+        href={url}
+        containerClassName={classes}
       >
         {children || `This Button`}
-      </a>
+      </MyLink>
     );
   }
 

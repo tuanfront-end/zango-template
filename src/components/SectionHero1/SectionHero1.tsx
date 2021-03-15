@@ -59,7 +59,7 @@ const SectionHero1 = () => {
                 {item.title}
               </h1>
               <div className="ml-1 transform transition duration-1000 translate-y-20 opacity-0 ttnc-glide-active-reset delay-200">
-                <ButtonSecondary>Shop now</ButtonSecondary>
+                <ButtonSecondary url="/shop">Shop now</ButtonSecondary>
               </div>
             </div>
           </div>

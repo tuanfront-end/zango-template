@@ -10,9 +10,10 @@ const MyLink: React.FC<MyLinkProps> = ({
   children,
   href = "#root",
   containerClassName = "",
+  ...args
 }) => {
   return (
-    <Link className={` ${containerClassName}`} to={href}>
+    <Link className={` ${containerClassName}`} to={href} {...args}>
       {children}
     </Link>
   );

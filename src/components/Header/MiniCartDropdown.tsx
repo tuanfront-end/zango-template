@@ -5,6 +5,8 @@ import Button from "components/Button/Button";
 import DropdownPanel from "components/Dropdown/DropdownPanel";
 import DropdownTrigger from "components/Dropdown/DropdownTrigger";
 import Dropdown from "components/Dropdown/Dropdown";
+import ButtonPrimary from "components/ButtonPrimary/ButtonPrimary";
+import MyLink from "components/MyLink/MyLink";
 
 const MiniCartDropdown = () => {
   const _renderItem = (index: number) => {
@@ -42,20 +44,15 @@ const MiniCartDropdown = () => {
           {_renderItem(1)}
         </div>
         <div className="px-8 flex flex-col space-y-3 text-center pt-4">
-          <a
-            className="font-medium text-gray-600 dark:text-gray-300 text-base block py-2 hover:underline"
-            href="#root"
-            target="_blank"
-            rel="noopener noreferrer"
+          <MyLink
+            containerClassName="font-medium text-gray-600 dark:text-gray-300 text-base block py-2 hover:underline"
+            href="/checkout"
           >
             Subtotal: $215.14
-          </a>
-          <Button containerClassName="bg-gray-900 dark:bg-gray-600 text-white uppercase">
-            View Cart
-          </Button>
-          <Button containerClassName="bg-gray-700 text-white uppercase">
-            Checkout
-          </Button>
+          </MyLink>
+          <ButtonPrimary url="/cart">View Cart</ButtonPrimary>
+
+          <ButtonPrimary url="/checkout">Checkout</ButtonPrimary>
         </div>
       </div>
     );

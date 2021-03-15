@@ -49,6 +49,7 @@ export const NAV_DATABASE: NavItemType[] = [
     link: "/the-blog",
     children: [
       { id: 22, name: "Blog", link: "/the-blog" },
+      { id: 222, name: "Blog Masonry", link: "/the-blog-masonry" },
       { id: 23, name: "Blog Single", link: "/blog-single" },
     ],
   },

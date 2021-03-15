@@ -3,6 +3,7 @@ import React from "react";
 import pDeal from "images/pDeal2.png";
 import Heading from "components/Heading/Heading";
 import Button from "components/Button/Button";
+import ButtonPrimary from "components/ButtonPrimary/ButtonPrimary";
 
 const SectionDeal = () => {
   const _renderDateCountDown = (
@@ -51,12 +52,7 @@ const SectionDeal = () => {
                 {_renderDateCountDown("ttnc-countDownDateTime__mins", "mins")}
                 {_renderDateCountDown("ttnc-countDownDateTime__secs", "secs")}
               </div>
-              <Button
-                url="#root"
-                containerClassName="border border-gray-900 bg-black text-white hover:bg-white hover:text-black uppercase"
-              >
-                Shop now
-              </Button>
+              <ButtonPrimary url="/shop">Shop now</ButtonPrimary>
             </div>
           </div>
           <div className="md:col-end-13 md:col-span-7 flex items-center justify-center">

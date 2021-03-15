@@ -27,11 +27,11 @@ const Card1: React.FC<Card1Props> = ({
         <span className="transition-all block text-2xl font-medium mb-3 group-hover:text-secondary">
           {name || `Running shoes`}
         </span>
-        <MyLink containerClassName="group-hover:text-secondary text-xs">
+        <span className="group-hover:text-secondary text-xs uppercase underline tracking-widest">
           Shop now
-        </MyLink>
+        </span>
       </div>
-      <a className="absolute inset-0 z-10" href="#root"></a>
+      <MyLink href="/shop" containerClassName="absolute inset-0 z-10"></MyLink>
     </div>
   );
 };

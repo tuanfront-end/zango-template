@@ -50,7 +50,7 @@ const SectionHero2 = () => {
               he had recently
             </span>
             <div className="transform transition duration-1000 -translate-x-20 opacity-0 delay-300 ttnc-glide-active-reset">
-              <ButtonPrimary>Shop now</ButtonPrimary>
+              <ButtonPrimary url="/shop">Shop now</ButtonPrimary>
             </div>
           </div>
         </div>

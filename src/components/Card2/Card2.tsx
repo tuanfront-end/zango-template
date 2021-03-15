@@ -2,6 +2,7 @@ import React from "react";
 import p4Img from "images/p4.png";
 import ListIconOnCard from "components/ListIconOnCard/ListIconOnCard";
 import QuickViewProduct from "components/QuickViewProduct/QuickViewProduct";
+import MyLink from "components/MyLink/MyLink";
 
 export interface Card2Props {
   img?: string;
@@ -60,12 +61,13 @@ const Card2: React.FC<Card2Props> = ({
           </a>
         </div>
         <div className="px-2 py-4 2xl:px-6 2xl:py-6 text-center text-gray-900 dark:text-gray-200 text-lg font-medium">
-          <a
-            href="#root"
-            className="transition-all block mb-2.5 group-hover:text-secondary font-normal"
+          <MyLink
+            href="/shop-single"
+            containerClassName="transition-all block mb-2.5 group-hover:text-secondary font-normal"
           >
             {name || `Running shoes`}
-          </a>
+          </MyLink>
+
           <div className="flex justify-center text-base space-x-4">
             <span className="block">{price || `154$`}</span>
             {oldPrice && (
