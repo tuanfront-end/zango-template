@@ -1,18 +1,27 @@
 window.addEventListener("load", function () {
-  const imgs = [...document.querySelectorAll(".ttnc-myimage-zoom-lens")];
-  imgs.forEach((item) => {
-    imageZoom(item.id, item.getAttribute("data-resuilt-id"));
-  });
+  setTimeout(() => {
+    const imgs = [...document.querySelectorAll(".ttnc-myimage-zoom-lens")];
+    imgs.forEach((item) => {
+      imageZoom(item.id, item.getAttribute("data-resuilt-id"));
+    });
+  }, 0);
 });
+
 function imageZoom(imgID, resultID) {
-  var img, lens, result, cx, cy;
+  let img, lens, result, cx, cy;
   img = document.getElementById(imgID);
   result = document.getElementById(resultID);
   /*create lens:*/
-  lens = document.createElement("DIV");
-  lens.setAttribute("class", "img-zoom-lens");
+  //
+
+  //
   /*insert lens:*/
-  img.parentElement.insertBefore(lens, img);
+  if (!img.previousSibling) {
+    lens = document.createElement("DIV");
+    lens.setAttribute("class", "img-zoom-lens");
+    img.parentElement.insertBefore(lens, img);
+  }
+
   /*calculate the ratio between result DIV and lens:*/
   cx = result.offsetWidth / lens.offsetWidth;
   cy = result.offsetHeight / lens.offsetHeight;
@@ -26,7 +35,7 @@ function imageZoom(imgID, resultID) {
   lens.addEventListener("touchmove", moveLens);
   img.addEventListener("touchmove", moveLens);
   function moveLens(e) {
-    var pos, x, y;
+    let pos, x, y;
     /*prevent any other actions that may occur when moving over the image:*/
     e.preventDefault();
     /*get the cursor's x and y positions:*/
@@ -54,7 +63,7 @@ function imageZoom(imgID, resultID) {
     result.style.backgroundPosition = "-" + x * cx + "px -" + y * cy + "px";
   }
   function getCursorPos(e) {
-    var a,
+    let a,
       x = 0,
       y = 0;
     e = e || window.event;
