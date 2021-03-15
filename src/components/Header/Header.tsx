@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div className="ttnc-Header bg-accents-900 border-b border-accents-800 py-6 px-4 md:px-10 2xl:px-16">
       <div className="relative flex justify-between items-center space-x-4 lg:space-x-8">
-        <div className="flex justify-start items-center flex-shrink-0 lg:w-0 lg:flex-1 space-x-4 xl:space-x-7">
+        <div className="flex justify-start items-center flex-shrink-0 lg:w-0 lg:flex-1 space-x-4 xl:space-x-6">
           <MenuBar />
           <div className="hidden md:block">
             <SearchInput />

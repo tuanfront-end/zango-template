@@ -1,20 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LocationStates } from "routers/types";
 
 export interface MyLinkProps {
-  href?: string;
+  href?: keyof LocationStates | "#root";
   containerClassName?: string;
 }
 const MyLink: React.FC<MyLinkProps> = ({
   children,
   href = "#root",
-  containerClassName = "text-gray-700 dark:text-gray-200",
+  containerClassName = "",
 }) => {
   return (
-    <Link
-      className={`uppercase tracking-widest text-xs underline font-medium hover:text-secondary ${containerClassName}`}
-      to={href}
-    >
+    <Link className={` ${containerClassName}`} to={href}>
       {children}
     </Link>
   );

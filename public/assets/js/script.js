@@ -1,13 +1,23 @@
 window.addEventListener("load", function () {
   _toogleNightMode();
+  //
   _handleToggleDropdown();
+  //
   _handleToggletoolTip();
+  //
   _toggleModal();
+  //
   _toggleHiddenClass();
+  //
   _newGlideCarousel();
+  //
   _setBgColorForAvatar();
+  //
   _countDownDateTime();
+  //
   _myNoUiSlider();
+  //
+  _gridMasonryGrid();
   //
 });
 
@@ -39,6 +49,16 @@ const avatarColors = [
   "#5E13BD",
   "#E208A7",
 ];
+
+function _gridMasonryGrid() {
+  const grid = document.querySelector(".ttnc-masonry-grid");
+  if (!grid) return;
+  const msnry = new Masonry(grid, {
+    itemSelector: ".ttnc-masonry-grid__item",
+    columnWidth: ".ttnc-masonry-grid__sizer",
+    percentPosition: true,
+  });
+}
 
 function _toogleNightMode() {
   // On page load or when changing themes, best to add inline in `head` to avoid FOUC

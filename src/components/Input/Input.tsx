@@ -12,7 +12,7 @@ const Input: React.FC<InputProps> = ({
   type = "text",
 }) => {
   return (
-    <label className={containerClassName}>
+    <label className={`space-y-2 ${containerClassName}`}>
       {label && (
         <span className="text-gray-700 dark:text-gray-300 text-sm font-LibreFranklin tracking-wide">
           {label}
@@ -20,7 +20,7 @@ const Input: React.FC<InputProps> = ({
       )}
       <input
         type={type}
-        className="mt-2 block w-full border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 font-LibreFranklin 2xl:py-3 placeholder-gray-400 tracking-wide text-sm"
+        className="block w-full border-gray-300 dark:border-gray-700 font-LibreFranklin xl:py-3 placeholder-gray-500 tracking-wide text-sm font-normal"
         placeholder={placeholder}
       />
     </label>

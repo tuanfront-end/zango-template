@@ -61,14 +61,14 @@ const SectionFeatures = () => {
           />
         </div>
         <div className="flex-grow px-4 my-2 border-l border-gray-200 dark:border-gray-600 text-gray-900 dark:text-gray-200">
-          <h2 className="text-2xl font-medium">{item.name}</h2>
+          <h2 className="text-xl xl:text-2xl font-medium">{item.name}</h2>
           <span className="font-LibreFranklin text-sm">{item.desc}</span>
         </div>
       </div>
     );
   };
   return (
-    <div className="py-14">
+    <div className="py-8 md:py-14">
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {DATA.map(_renderItem)}

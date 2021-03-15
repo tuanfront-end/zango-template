@@ -11,6 +11,10 @@ import ShopPage2 from "containers/ShopPage/ShopPage2";
 import ShopSinglePage from "containers/ShopSinglePage/ShopSinglePage";
 import CartPage from "containers/CartPage/CartPage";
 import CheckoutPage from "containers/CheckoutPage/CheckoutPage";
+import BlogPage from "containers/BlogPage/BlogPage";
+import BlogMasonryPage from "containers/BlogMasonryPage/BlogMasonryPage";
+import BlogSinglePage from "containers/BlogSinglePage/BlogSinglePage";
+import AboutPage from "containers/AboutPage/AboutPage";
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: HomePage },
@@ -21,6 +25,10 @@ export const pages: Page[] = [
   { path: "/shop-single", exact: true, component: ShopSinglePage },
   { path: "/cart", exact: true, component: CartPage },
   { path: "/checkout", exact: true, component: CheckoutPage },
+  { path: "/the-blog", exact: true, component: BlogPage },
+  { path: "/the-blog-masonry", exact: true, component: BlogMasonryPage },
+  { path: "/blog-single", exact: true, component: BlogSinglePage },
+  { path: "/about-us", exact: true, component: AboutPage },
 ];
 
 const Routes = () => {

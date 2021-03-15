@@ -12,8 +12,8 @@ export interface LocationStates {
   "/cart"?: {};
   "/checkout"?: {};
   "/the-blog"?: {};
+  "/the-blog-masonry"?: {};
   "/blog-single"?: {};
-  "/detail2"?: {};
 }
 
 export type PathName = keyof LocationStates;
