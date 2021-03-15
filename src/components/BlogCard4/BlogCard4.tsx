@@ -1,12 +1,12 @@
 import MyLink from "components/MyLink/MyLink";
 import React from "react";
 
-export interface BlogCard3Props {
+export interface BlogCard4Props {
   title: string;
   img: string;
 }
 
-const BlogCard3: React.FC<BlogCard3Props> = ({ title, img }) => {
+const BlogCard4: React.FC<BlogCard4Props> = ({ title, img }) => {
   const _renderPostMeta = () => {
     return (
       <div className="flex flex-wrap items-center text-xs tracking-wider text-gray-600 dark:text-gray-300 uppercase font-medium space-x-3">
@@ -25,21 +25,16 @@ const BlogCard3: React.FC<BlogCard3Props> = ({ title, img }) => {
   };
 
   return (
-    <div className="ttnc-BlogCard3 text-gray-900 dark:text-gray-100">
-      <img src={img} className="w-full mb-6 md:mb-8 object-cover" alt="" />
+    <div className="ttnc-BlogCard4 text-gray-900 dark:text-gray-100">
+      <div className="aspect-h-12 aspect-w-16 mb-6 md:mb-8">
+        <img src={img} className="w-full h-full  object-cover" alt="" />
+      </div>
       {_renderPostMeta()}
       <h2 className="mt-3 mb-4 text-2xl font-medium hover:text-secondary">
         <MyLink containerClassName="line-clamp-3" href="/blog-single">
           {title}
         </MyLink>
       </h2>
-      <div className="hidden md:block mb-4">
-        <span className="text-base font-LibreFranklin text-gray-700 dark:text-gray-300 line-clamp-2">
-          Hardly able to cover it and seemed ready to slide off any moment. His
-          many legs, pitifully thin compared with the size of the rest of him,
-          waved about helplessly as he looked out the entire.
-        </span>
-      </div>
       <a
         href="#root"
         className="font-medium uppercase tracking-wider hover:text-secondary"
@@ -50,4 +45,4 @@ const BlogCard3: React.FC<BlogCard3Props> = ({ title, img }) => {
   );
 };
 
-export default BlogCard3;
+export default BlogCard4;

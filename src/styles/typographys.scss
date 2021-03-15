@@ -122,3 +122,26 @@ input::-webkit-inner-spin-button {
     }
   }
 }
+
+//
+
+.ttnc-404 {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 300;
+  @media (min-width: 480px) {
+    font-size: 90px;
+  }
+  @media (min-width: 640px) {
+    font-size: 150px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 200px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 220px;
+  }
+  @media (min-width: 1536px) {
+    font-size: 230px;
+  }
+}

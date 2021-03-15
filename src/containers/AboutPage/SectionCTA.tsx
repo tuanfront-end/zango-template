@@ -8,8 +8,8 @@ const SectionCTA = () => {
     <div className="px-4 py-8 md:py-14">
       <div className="grid grid-cols-1 xl:grid-cols-3 max-w-2xl xl:max-w-full mx-auto">
         <div className="relative">
-          <div className="bg-white dark:bg-transparent text-gray-900 dark:text-gray-100 w-full p-4 xl:px-10 xl:py-14 2xl:px-16 2xl:py-20 mb-8 xl:mb-0 xl:shadow-xl xl:absolute xl:top-1/2 xl:transform xl:-translate-y-1/2 xl:-right-14 2xl:-right-16 text-center xl:text-right">
-            <span className="uppercase text-secondary tracking-wider font-medium text-sm mb-4 block">
+          <div className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 w-full p-4 xl:px-10 xl:py-14 2xl:px-16 2xl:py-20 mb-8 xl:mb-0 xl:shadow-xl xl:absolute xl:top-1/2 xl:transform xl:-translate-y-1/2 xl:-right-14 2xl:-right-16 text-center xl:text-right">
+            <span className="uppercase text-secondary tracking-widest font-medium text-xs mb-4 block">
               About us
             </span>
             <h2 className="text-2xl lg:text-4xl 2xl:text-5xl mb-8">

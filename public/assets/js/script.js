@@ -19,6 +19,7 @@ window.addEventListener("load", function () {
   //
   _gridMasonryGrid();
   //
+  _processChangeTab();
 });
 
 const avatarColors = [
@@ -429,4 +430,40 @@ function _myNoUiSlider() {
   slider.noUiSlider.on("update", function (values, handle) {
     valuesDivs[handle].innerHTML = values[handle];
   });
+}
+
+function _processChangeTab() {
+  const btns = [...document.querySelectorAll("[data-ttnc-tab]")];
+  if (!btns.length) return;
+
+  btns.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      const tabID = item.getAttribute("data-ttnc-tab");
+      _changeAtiveTab(event, tabID);
+    });
+  });
+}
+
+function _changeAtiveTab(event, tabID) {
+  let element = event.target;
+  while (element.nodeName !== "A") {
+    element = element.parentNode;
+  }
+  ulElement = element.parentNode.parentNode;
+  aElements = ulElement.querySelectorAll("li > a");
+  tabContents = document
+    .getElementById("tabs-id")
+    .querySelectorAll(".tab-content > div");
+  for (let i = 0; i < aElements.length; i++) {
+    aElements[i].classList.remove("underline");
+
+    tabContents[i].classList.add("hidden");
+    tabContents[i].classList.remove("block");
+  }
+
+  element.classList.add("underline");
+
+  document.getElementById(tabID).classList.remove("hidden");
+  document.getElementById(tabID).classList.add("block");
 }

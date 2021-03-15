@@ -14,6 +14,7 @@ export interface LocationStates {
   "/the-blog"?: {};
   "/the-blog-masonry"?: {};
   "/blog-single"?: {};
+  "/404"?: {};
 }
 
 export type PathName = keyof LocationStates;

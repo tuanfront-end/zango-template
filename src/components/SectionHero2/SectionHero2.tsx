@@ -9,10 +9,7 @@ import ButtonPrimary from "components/ButtonPrimary/ButtonPrimary";
 const SectionHero2 = () => {
   const _renderItem = (index = 0) => {
     return (
-      <div
-        className="relative flex flex-col justify-center bg-gray-200"
-        style={{ minHeight: "90vh" }}
-      >
+      <div className="relative flex flex-col justify-center bg-gray-200 h-screen">
         <img
           className="block absolute inset-0  w-full h-full object-cover"
           src={!index ? hero1 : index === 1 ? hero2 : hero3}
@@ -37,12 +34,13 @@ const SectionHero2 = () => {
                 </React.Fragment>
               ) : index === 1 ? (
                 <React.Fragment>
-                  <span className="font-thin">Collection</span> <br /> Trendy
+                  <span className="font-thin">Collection</span> <br /> The
+                  Trendy
                 </React.Fragment>
               ) : (
                 <React.Fragment>
                   Lookbook <br />
-                  <span className="font-thin">2021</span>
+                  <span className="font-thin">Great 2021</span>
                 </React.Fragment>
               )}
             </h1>

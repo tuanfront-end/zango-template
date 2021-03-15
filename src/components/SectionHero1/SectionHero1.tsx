@@ -22,13 +22,13 @@ const SectionHero1 = () => {
 
     {
       title: "Collection",
-      titleThin: "Trendy",
+      titleThin: "The Trending ",
       subTitle: "Trendy shop",
       img: hero2,
     },
     {
       title: "Lookbook",
-      titleThin: "2021",
+      titleThin: "Great 2021",
       subTitle: "Winter shop",
       img: hero3,
     },
@@ -39,7 +39,7 @@ const SectionHero1 = () => {
       <li className="glide__slide" key={String(index)}>
         <div
           className="relative flex flex-col justify-center bg-accents-900"
-          style={{ minHeight: "90vh" }}
+          style={{ minHeight: "100vh" }}
         >
           <img
             className="block absolute inset-0  w-full h-full object-cover transform transition duration-1000 opacity-70 ttnc-glide-active-reset"
@@ -72,12 +72,7 @@ const SectionHero1 = () => {
     <div className="relative pb-8 md:pb-14">
       <div className="glide-fade relative">
         <div className="glide__track" data-glide-el="track">
-          <ul className="glide__slides">
-            {DATA.map(_renderItem)}
-            {/* <li className="glide__slide">{_renderItem()}</li>
-            <li className="glide__slide">{_renderItem(1)}</li>
-            <li className="glide__slide">{_renderItem(2)}</li> */}
-          </ul>
+          <ul className="glide__slides">{DATA.map(_renderItem)}</ul>
         </div>
         <div className="absolute bottom-16 2xl:bottom-20 left-0 w-full">
           <div className="container">

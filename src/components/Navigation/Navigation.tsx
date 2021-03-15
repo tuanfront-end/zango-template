@@ -23,20 +23,25 @@ export const NAV_DATABASE: NavItemType[] = [
       { id: 4, name: "Home 3", link: "/home3" },
     ],
   },
-
+  {
+    id: 16,
+    name: "Shop",
+    link: "/shop",
+    children: [
+      { id: 18, name: "Shop Single", link: "/shop-single" },
+      { id: 17, name: "Card", link: "/cart" },
+      { id: 18, name: "Checkout", link: "/checkout" },
+    ],
+  },
   {
     id: 11,
     name: "About",
     link: "/about-us",
   },
   {
-    id: 16,
-    name: "Shop",
-    link: "/",
-    children: [
-      { id: 17, name: "Card", link: "/cart" },
-      { id: 18, name: "Checkout", link: "/checkout" },
-    ],
+    id: 211,
+    name: "Contact",
+    link: "/contact",
   },
   {
     id: 21,
@@ -47,21 +52,12 @@ export const NAV_DATABASE: NavItemType[] = [
       { id: 23, name: "Blog Single", link: "/blog-single" },
     ],
   },
-  {
-    id: 211,
-    name: "Contact",
-    link: "/the-blog",
-  },
 
   {
     id: 4,
     name: "Pages",
     link: "/",
-    children: [
-      { id: 7, name: "Avatars", link: "/cart" },
-      { id: 8, name: "Forms Layout", link: "/cart" },
-      { id: 9, name: "Messages", link: "/cart" },
-    ],
+    children: [{ id: 7, name: "404 Page", link: "/404" }],
   },
 ];
 const DATA: NavItemType[] = NAV_DATABASE;
@@ -70,7 +66,7 @@ function Navigation() {
   const _renderMenuChild = (item: NavItemType, className = "top-full") => {
     return (
       <div className={`sub-menu absolute py-3 px-2 z-50 w-52 ${className}`}>
-        <div className="bg-white dark:bg-gray-900 shadow-lg ring-1 ring-black ring-opacity-5 py-1">
+        <div className="bg-white dark:bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 py-1">
           {item.children?.map((i, index) => (
             <div
               key={i.link + index}

@@ -15,6 +15,8 @@ import BlogPage from "containers/BlogPage/BlogPage";
 import BlogMasonryPage from "containers/BlogMasonryPage/BlogMasonryPage";
 import BlogSinglePage from "containers/BlogSinglePage/BlogSinglePage";
 import AboutPage from "containers/AboutPage/AboutPage";
+import ContactPage from "containers/ContactPage/ContactPage";
+import Page404 from "containers/404Page/404Page";
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: HomePage },
@@ -29,6 +31,8 @@ export const pages: Page[] = [
   { path: "/the-blog-masonry", exact: true, component: BlogMasonryPage },
   { path: "/blog-single", exact: true, component: BlogSinglePage },
   { path: "/about-us", exact: true, component: AboutPage },
+  { path: "/contact", exact: true, component: ContactPage },
+  { path: "/404", exact: true, component: Page404 },
 ];
 
 const Routes = () => {

@@ -21,18 +21,18 @@ const SectionClientSay = () => {
 
   const _renderItem = (item: any) => {
     return (
-      <div className="grid grid-cols-2" style={{ height: 600 }}>
-        <div className="px-8 pt-8 border border-black">
-          <div className="relative w-full h-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="hidden sm:block  pt-2 md:px-8 md:pt-8 2xl:mt-10 col-span-1">
+          <div className="w-full h-full relative">
             <img
-              className="absolute bottom-0 left-0 w-full"
+              className="absolute bottom-0 right-0 max-w-full max-h-full object-cover"
               src={item.img}
               alt=""
             />
           </div>
         </div>
-        <div className="flex items-center justify-start max-w-lg">
-          <div className="text-gray-200">
+        <div className="md:col-span-1 flex items-center justify-start max-w-lg">
+          <div className="text-gray-200 px-4 sm:px-0 py-12 md:py-24 lg:py-32 xl:py-40">
             <span className="block mb-8 2xl:mb-10 text-lg">
               {`“${item.text}”`}
             </span>
@@ -52,7 +52,7 @@ const SectionClientSay = () => {
 
   return (
     <div
-      className="ttnc-SectionClientSay my-24 bg-cover"
+      className="ttnc-SectionClientSay my-8 lg:my-14 bg-cover"
       style={{
         backgroundImage: `url(${clientSayBG})`,
       }}

@@ -1,17 +1,38 @@
 import Comment from "components/Comment/Comment";
+import CommentForm from "containers/BlogSinglePage/CommentForm";
 import React from "react";
 
 const SectionDescription = () => {
   const _renderReview = () => {
     return (
-      <div className="py-2 max-w-3xl mx-auto px-4">
-        <Comment />
+      <div id="tab-review" className="hidden py-2 max-w-3xl mx-auto px-4">
+        <ul className="comments space-y-10">
+          <li>
+            <Comment />
+            <ul className="children ml-2 md:ml-13 my-10 pl-10 md:pl-5 space-y-10">
+              <li>
+                <Comment />
+                <ul className="children ml-2 md:ml-13 my-10 pl-10 md:pl-5 space-y-10">
+                  <li>
+                    <Comment />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div>
+          <CommentForm />
+        </div>
       </div>
     );
   };
   const _renderDesc = () => {
     return (
-      <div className="py-2 max-w-3xl mx-auto text-sm px-4 text-gray-800 dark:text-gray-200">
+      <div
+        id="tab-description"
+        className="block py-2 max-w-3xl mx-auto text-sm px-4 text-gray-800 dark:text-gray-200"
+      >
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
         voluptatibus mollitia aspernatur consequatur veniam quasi voluptate
         libero nostrum aliquid eius reprehenderit neque dicta eos natus, sint
@@ -29,27 +50,37 @@ const SectionDescription = () => {
     );
   };
   return (
-    <div className="ttnc-SectionDescription glide-fade bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 mt-20">
-      <div
-        className="border-t border-b border-gray-300 flex items-center justify-center py-6 space-x-10 mb-8"
-        data-glide-el="controls[nav]"
-      >
-        <button data-glide-dir="=0" className="bg-none bg-transparent">
-          <span className=" uppercase font-medium text-sm p-1">
-            description
-          </span>
-        </button>
-        <button data-glide-dir="=1" className="bg-none bg-transparent">
-          <span className=" uppercase font-medium text-sm p-1">
-            Reviews (3)
-          </span>
-        </button>
-      </div>
-      <div className="glide__track" data-glide-el="track">
-        <ul className="glide__slides">
-          <li className="glide__slide">{_renderDesc()}</li>
-          <li className="glide__slide">{_renderReview()}</li>
-        </ul>
+    <div
+      id="tabs-id"
+      className="ttnc-SectionDescription bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 mt-20"
+    >
+      <ul className="border-t border-b border-gray-300 flex items-center justify-center py-6 space-x-10 mb-8">
+        <li>
+          <a
+            href="#root"
+            className="bg-none bg-transparent underline inline-block"
+            data-ttnc-tab="tab-description"
+          >
+            <span className=" uppercase font-medium text-sm p-1">
+              description
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#root"
+            className="bg-none bg-transparent inline-block"
+            data-ttnc-tab="tab-review"
+          >
+            <span className=" uppercase font-medium text-sm p-1">
+              Reviews (3)
+            </span>
+          </a>
+        </li>
+      </ul>
+      <div className="tab-content tab-space">
+        {_renderDesc()}
+        {_renderReview()}
       </div>
     </div>
   );

@@ -36,7 +36,7 @@ const MiniCartDropdown = () => {
 
   const _renderContent = () => {
     return (
-      <div className="w-80 shadow-lg bg-white dark:bg-gray-900 py-8 divide-y divide-gray-200 dark:divide-gray-800">
+      <div className="w-80 shadow-lg bg-white dark:bg-gray-800 py-8 divide-y divide-gray-200 dark:divide-gray-800">
         <div className="pb-5 space-y-5">
           {_renderItem(0)}
           {_renderItem(1)}

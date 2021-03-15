@@ -7,7 +7,7 @@ import SectionRelated from "./SectionRelated";
 
 export default function ShopSinglePage() {
   return (
-    <div className="ttnc-ShopSinglePage bg-white dark:bg-gray-800">
+    <div className="ttnc-ShopSinglePage bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
       <Header />
       <SectionBannerPage pageName="Shop Single" />
       <div className="container py-14 xl:py-24">
